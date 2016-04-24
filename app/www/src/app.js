@@ -29,6 +29,7 @@ config.$inject = ['$ionicConfigProvider' ,'$stateProvider', '$urlRouterProvider'
 
 function config($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
   $ionicConfigProvider.tabs.position('bottom');
+  $ionicConfigProvider.navBar.alignTitle('center');
 
   $stateProvider
     .state('app', {
