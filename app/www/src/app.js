@@ -20,13 +20,15 @@ function run($ionicPlatform) {
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    $ionicConfigProvider.tabs.position('bottom');
   });
 }
 
-config.$inject = ['$stateProvider', '$urlRouterProvider'];
+config.$inject = ['$ionicConfigProvider' ,'$stateProvider', '$urlRouterProvider'];
 
-function config($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/app/status');
+function config($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
 
   $stateProvider
     .state('app', {
@@ -34,4 +36,6 @@ function config($stateProvider, $urlRouterProvider) {
       abstract: true,
       templateUrl: 'src/app.html'
     });
+
+  $urlRouterProvider.otherwise('/app/status');
 }
