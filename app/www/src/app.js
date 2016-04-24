@@ -20,8 +20,6 @@ function run($ionicPlatform) {
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
-
-    $ionicConfigProvider.tabs.position('bottom');
   });
 }
 
