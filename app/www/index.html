@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- modules -->
+    <script src="src/app.js"></script>
+    <script src="src/modules/status/status.js"></script>
+    <script src="src/modules/account/account.js"></script>
+    <script src="src/modules/chats/chats.js"></script>
+
+    <script src="src/services/chats.js"></script>
+    <script src="src/modules/status/status_routes.js"></script>
+    <script src="src/modules/status/status_controller.js"></script>
+    <script src="src/modules/account/account_routes.js"></script>
+    <script src="src/modules/account/account_controller.js"></script>
+    <script src="src/modules/chats/chats_routes.js"></script>
+    <script src="src/modules/chats/chats_controller.js"></script>
+  </head>
+  <body ng-app="app">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
