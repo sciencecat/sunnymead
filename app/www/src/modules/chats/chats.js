@@ -1,2 +1,7 @@
-angular
-  .module('app.chats', []);
+(function () {
+  'use strict';
+
+  angular
+    .module('app.chats', []);
+
+})();

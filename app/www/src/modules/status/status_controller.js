@@ -1,9 +1,14 @@
-angular
-  .module('app.status')
-  .controller('StatusController', StatusController);
+(function () {
+  'use strict';
 
-StatusController.$inject = [];
+  angular
+    .module('app.status')
+    .controller('StatusController', StatusController);
 
-function StatusController() {
+  StatusController.$inject = [];
 
-}
+  function StatusController() {
+
+  }
+
+})();

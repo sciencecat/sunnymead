@@ -1,18 +1,23 @@
-angular
-  .module('app.status')
-  .config(routes);
+(function () {
+  'use strict';
 
-routes.$inject = ['$stateProvider'];
+  angular
+    .module('app.status')
+    .config(routes);
 
-function routes($stateProvider) {
-  $stateProvider
-    .state('app.status', {
-      url: '/status',
-      views: {
-        'app-status': {
-          templateUrl: 'src/modules/status/status_template.html',
-          controller: 'StatusController'
+  routes.$inject = ['$stateProvider'];
+
+  function routes($stateProvider) {
+    $stateProvider
+      .state('app.status', {
+        url: '/status',
+        views: {
+          'app-status': {
+            templateUrl: 'src/modules/status/status_template.html',
+            controller: 'StatusController'
+          }
         }
-      }
-    });
-}
+      });
+  }
+
+})();

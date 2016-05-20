@@ -1,12 +1,17 @@
-angular
-  .module('app.chats')
-  .controller('ChatsController', ChatsController);
+(function () {
+  'use strict';
 
-ChatsController.$inject = ['$scope', 'Chats'];
+  angular
+    .module('app.chats')
+    .controller('ChatsController', ChatsController);
 
-function ChatsController($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
-}
+  ChatsController.$inject = ['$scope', 'Chats'];
+
+  function ChatsController($scope, Chats) {
+    $scope.chats = Chats.all();
+    $scope.remove = function(chat) {
+      Chats.remove(chat);
+    };
+  }
+
+})();

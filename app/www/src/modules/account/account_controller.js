@@ -1,11 +1,17 @@
-angular
-  .module('app.account')
-  .controller('AccountController', AccountController);
+(function () {
+  'use strict';
 
-AccountController.$inject = ['$scope'];
+  angular
+    .module('app.account')
+    .controller('AccountController', AccountController);
 
-function AccountController($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-}
+  AccountController.$inject = ['$scope'];
+
+  function AccountController($scope) {
+    $scope.settings = {
+      enableFriends: true
+    };
+  }
+
+})();
+
