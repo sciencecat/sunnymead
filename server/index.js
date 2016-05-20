@@ -4,7 +4,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(morgan('combined'));
-app.use(express.static('app/www'));
+app.use(express.static(__dirname + '/../app/www'));
+
+app.get('/crash', function () {
+  process.exit(1);
+});
 
 app.listen(port, () => {
   console.info(`Server running on port ${port}`);

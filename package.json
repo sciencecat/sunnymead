@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npm install -g pm2",
-    "start": "node index.js",
+    "start": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -17,6 +16,7 @@
   "homepage": "https://bitbucket.org/k44/tcc#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "pm2": "^1.1.3"
   }
 }

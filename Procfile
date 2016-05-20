@@ -1,1 +1,1 @@
-web: pm2 start index.js
+web: node pm2-wrap.js
