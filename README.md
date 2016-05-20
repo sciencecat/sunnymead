@@ -23,7 +23,7 @@ $ npm test
 
 ### Deploy
 
-Deploy is made **automagically** by Codeship when new pushes comes:
+Deploy is made **automatically** by Codeship when new pushes comes:
 
 - **staging**: for staging environment
 - **master**: for production environment
