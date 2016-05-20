@@ -1,40 +1,45 @@
-angular
-  .module('app', [
-    'ionic',
-    'app.status',
-    'app.chats',
-    'app.account'
-  ])
-  .config(config)
-  .run(run);
+(function () {
+  'use strict';
 
-run.$inject = ['$ionicPlatform'];
+  angular
+    .module('app', [
+      'ionic',
+      'app.status',
+      'app.chats',
+      'app.account'
+    ])
+    .config(config)
+    .run(run);
 
-function run($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
+  run.$inject = ['$ionicPlatform'];
 
-    }
-    if (window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
-}
+  function run($ionicPlatform) {
+    $ionicPlatform.ready(function() {
+      if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        cordova.plugins.Keyboard.disableScroll(true);
 
-config.$inject = ['$ionicConfigProvider' ,'$stateProvider', '$urlRouterProvider'];
-
-function config($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
-  $ionicConfigProvider.tabs.position('bottom');
-  $ionicConfigProvider.navBar.alignTitle('center');
-
-  $stateProvider
-    .state('app', {
-      url: '/app',
-      abstract: true,
-      templateUrl: 'src/app.html'
+      }
+      if (window.StatusBar) {
+        StatusBar.styleDefault();
+      }
     });
+  }
 
-  $urlRouterProvider.otherwise('/app/status');
-}
+  config.$inject = ['$ionicConfigProvider' ,'$stateProvider', '$urlRouterProvider'];
+
+  function config($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
+    $ionicConfigProvider.navBar.alignTitle('center');
+
+    $stateProvider
+      .state('app', {
+        url: '/app',
+        abstract: true,
+        templateUrl: 'src/app.html'
+      });
+
+    $urlRouterProvider.otherwise('/app/status');
+  }
+
+})();
