@@ -1,3 +1,11 @@
+var pmx = require('pmx').init({
+  http: true,
+  errors: true,
+  custom_probes: true,
+  network: true,
+  ports: true
+});
+
 var pm2 = require('pm2');
 
 var instances = process.env.WEB_CONCURRENCY || -1;
