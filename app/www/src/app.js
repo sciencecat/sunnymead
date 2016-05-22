@@ -11,6 +11,8 @@
   function config($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
     $ionicConfigProvider.tabs.position('bottom');
     $ionicConfigProvider.navBar.alignTitle('center');
+    $ionicConfigProvider.backButton.text('Voltar');
+    $ionicConfigProvider.backButton.previousTitleText(false);
   }
 
   run.$inject = ['$ionicPlatform'];

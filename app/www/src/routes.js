@@ -8,6 +8,8 @@
   routes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
   function routes($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/app/quiz');
+
     $stateProvider.state('app', {
       url: '/app',
       abstract: true,
@@ -46,8 +48,6 @@
         }
       }
     });
-
-    $urlRouterProvider.otherwise('/app/quiz');
   }
 
 })();
