@@ -2,14 +2,16 @@
   'use strict';
 
   angular
-    .module('app', [
-      'ionic',
-      'app.status',
-      'app.chats',
-      'app.account'
-    ])
+    .module('app', ['ionic'])
     .config(config)
     .run(run);
+
+  config.$inject = ['$ionicConfigProvider'];
+
+  function config($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
+    $ionicConfigProvider.navBar.alignTitle('center');
+  }
 
   run.$inject = ['$ionicPlatform'];
 
@@ -24,22 +26,6 @@
         StatusBar.styleDefault();
       }
     });
-  }
-
-  config.$inject = ['$ionicConfigProvider' ,'$stateProvider', '$urlRouterProvider'];
-
-  function config($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
-    $ionicConfigProvider.tabs.position('bottom');
-    $ionicConfigProvider.navBar.alignTitle('center');
-
-    $stateProvider
-      .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'src/app.html'
-      });
-
-    $urlRouterProvider.otherwise('/app/status');
   }
 
 })();
