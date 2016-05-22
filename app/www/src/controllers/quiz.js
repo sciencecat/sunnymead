@@ -5,12 +5,12 @@
     .module('app')
     .controller('QuizController', QuizController);
 
-  QuizController.$inject = ['QuizRepository'];
+  QuizController.$inject = [];
 
-  function QuizController(QuizRepository) {
+  function QuizController() {
     var vm = this;
 
-    vm.quiz = QuizRepository.get();
+    vm.quiz = null;
   }
 
 })();
