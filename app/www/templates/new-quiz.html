@@ -1,4 +1,17 @@
 <ion-view view-title="Questionário">
   <ion-content class="padding">
+
+    <div ng-repeat="question in vm.questions" class="list card">
+      <div class="item">
+        <h2 ng-bind="'Pergunta ' + ($index + 1)"></h2>
+      </div>
+      <div class="item item-text-wrap">
+        <span ng-bind="question.text"></span>
+      </div>
+      <div class="item item-text-wrap">
+        <answerer ng-model="question.answer"></answerer>
+      </div>
+    </div>
+
   </ion-content>
 </ion-view>
