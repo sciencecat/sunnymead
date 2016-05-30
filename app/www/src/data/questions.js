@@ -3,14 +3,7 @@
 
   angular
     .module('app')
-    .controller('NewQuizController', NewQuizController);
-
-  NewQuizController.$inject = [];
-
-  function NewQuizController() {
-    var vm = this;
-
-    vm.questions = [
+    .constant('Questions', [
       {
         id: 1,
         text: 'Lorem Ipsum Dolor Sit Amet Brubbles Struggles Nuggles Bubbles?',
@@ -23,7 +16,6 @@
         type: 1,
         answer: 1
       }
-    ];
-  }
+    ]);
 
 })();

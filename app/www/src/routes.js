@@ -27,24 +27,24 @@
       }
     });
 
+    $stateProvider.state('app.result', {
+      url: '/result',
+      views: {
+        'app-quiz': {
+          controller: 'ResultController',
+          controllerAs: 'vm',
+          templateUrl: 'templates/result.html'
+        }
+      }
+    });
+
     $stateProvider.state('app.quiz', {
-      url: '/quiz',
+      url: '/quiz?page',
       views: {
         'app-quiz': {
           controller: 'QuizController',
           controllerAs: 'vm',
           templateUrl: 'templates/quiz.html'
-        }
-      }
-    });
-
-    $stateProvider.state('app.new-quiz', {
-      url: '/new-quiz?page',
-      views: {
-        'app-quiz': {
-          controller: 'NewQuizController',
-          controllerAs: 'vm',
-          templateUrl: 'templates/new-quiz.html'
         }
       }
     });

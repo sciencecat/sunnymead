@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app', ['ionic'])
+    .module('app', ['ionic', 'ngStorage'])
     .config(config)
     .run(run);
 
