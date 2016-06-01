@@ -6,12 +6,14 @@
     .directive('answerer', function () {
       var directive = {
         restrict: 'E',
-        bindToController: {
-          model: '=ngModel'
+        scope: {
+          model: '=ngModel',
+          onAnswer: '&'
         },
         templateUrl: 'src/directives/answerer/answerer.html',
         controller: AnswererController,
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        bindToController: true
       };
 
       AnswererController.$inject = [];
@@ -23,6 +25,7 @@
 
         vm.change = function (value) {
           vm.model = value;
+          vm.onAnswer();
         }
       }
 

@@ -9,6 +9,7 @@
     <link href="styles/general.css" rel="stylesheet">
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
     <script src="cordova.js"></script>
 
     <script src="src/app.js"></script>
@@ -16,9 +17,15 @@
 
     <script src="src/controllers/info.js"></script>
     <script src="src/controllers/quiz.js"></script>
-    <script src="src/controllers/new-quiz.js"></script>
+    <script src="src/controllers/result.js"></script>
+    
+    <script src="src/data/questions.js"></script>
+    <script src="src/repositories/questions.js"></script>
 
     <script src="src/directives/answerer/answerer.js"></script>
+    
+    <script src="src/filters/pagination.js"></script>
+    <script src="src/filters/shuffle.js"></script>
   </head>
   <body ng-app="app">
     <ion-nav-view></ion-nav-view>
