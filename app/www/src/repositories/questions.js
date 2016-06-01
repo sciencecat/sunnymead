@@ -23,7 +23,7 @@
         return false;
       }
       
-      return $localStorage.questions.every(function () {
+      return $localStorage.questions.every(function (question, index) {
         if (question.answer < 1 || question.answer > 5) {
           return false;
         }
@@ -34,7 +34,8 @@
     
     return {
       get: get,
-      save: save
+      save: save,
+      isValid: isValid
     };
   }
 

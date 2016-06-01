@@ -15,5 +15,20 @@
         
     <pagination-control steps="5" total="vm.questions.length"></pagination-control>
 
+    <a class="button button-outline  button-block"
+       ng-class="{ 'button-assertive': !vm.isValid(), 'button-balanced': vm.isValid() }"
+       ng-disabled="!vm.isValid()"
+       ng-bind="vm.isValid() ? 'Finalizar' : 'Responda a todas as perguntas'"></a>
+
+    <div class="list" ng-if="vm.debug">
+      <div class="item">
+        <h3>Debug is On!</h3>
+      </div>
+      <div class="item button-bar">
+        <a class="button button-stable ion-ios-star-outline" ng-click="vm.unanswerAll()"></a>
+        <a class="button button-stable ion-ios-star" ng-click="vm.answerAll()"></a>
+      </div>
+    </div>
+
   </ion-content>
 </ion-view>
