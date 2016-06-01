@@ -13,7 +13,8 @@
         templateUrl: 'src/directives/answerer/answerer.html',
         controller: AnswererController,
         controllerAs: 'vm',
-        bindToController: true
+        bindToController: true,
+        replace: true
       };
 
       AnswererController.$inject = [];
