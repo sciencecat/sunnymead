@@ -1,9 +1,11 @@
 <ion-view view-title="Questionário">
   <ion-content class="padding">
+    
+    <pagination-range steps="5" total="vm.questions.length"></pagination-range>
 
-    <div ng-repeat="question in vm.questions" class="list card">
+    <div ng-repeat="question in vm.questions | pagination:5" class="list card">
       <div class="item">
-        <h2 ng-bind="'Pergunta ' + ($index + 1)"></h2>
+        <h2 ng-bind="'Pergunta ' + (vm.questions.indexOf(question) + 1)"></h2>
       </div>
       <div class="item item-text-wrap">
         <span ng-bind="question.text"></span>
@@ -12,6 +14,8 @@
         <answerer ng-model="question.answer" on-answer="vm.saveQuestions()"></answerer>
       </div>
     </div>
+    
+    <pagination-control steps="5" total="vm.questions.length"></pagination-control>
 
   </ion-content>
 </ion-view>

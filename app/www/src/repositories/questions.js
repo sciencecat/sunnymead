@@ -8,7 +8,7 @@
   QuestionsRepository.$inject = ['Questions', '$localStorage'];
 
   function QuestionsRepository(Questions, $localStorage) {
-    $localStorage.questions = $localStorage.questions || Questions;
+    $localStorage.questions = $localStorage.questions || Questions.items;
     
     function get() {
       return angular.copy($localStorage.questions);
