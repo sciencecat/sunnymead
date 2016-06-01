@@ -5,10 +5,10 @@
     .module('app')
     .factory('QuestionsRepository', QuestionsRepository);
 
-  QuestionsRepository.$inject = ['Questions', '$localStorage'];
+  QuestionsRepository.$inject = ['Questions', '$localStorage', '$filter'];
 
-  function QuestionsRepository(Questions, $localStorage) {
-    $localStorage.questions = $localStorage.questions || Questions.items;
+  function QuestionsRepository(Questions, $localStorage, $filter) {
+    $localStorage.questions = $localStorage.questions || $filter('shuffle')(Questions);
     
     function get() {
       return angular.copy($localStorage.questions);
