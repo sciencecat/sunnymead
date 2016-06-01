@@ -9,7 +9,12 @@
 
   function pagination($state) {
     return function (items, steps) {
-      var page = Number($state.params.page || 1);
+      if (!$state.params.page) {
+        $state.go('.', { page: 1 },  { notify: false });
+        return;
+      }
+      
+      var page = Number($state.params.page);
       var offset = (page - 1) * steps;
       var limit = page * steps;
       

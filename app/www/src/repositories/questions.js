@@ -15,20 +15,21 @@
     }
     
     function save(questions) {
-      if (!questions.every(isValid)) {
-        return false;
-      }
-      
       $localStorage.questions = questions;
-      return true;
     }
     
-    function isValid(question) {
-      if (question.answer < 1 || question.answer > 5) {
+    function isValid() {
+      if ($localStorage.questions.length !== Questions.length) {
         return false;
       }
       
-      return true;
+      return $localStorage.questions.every(function () {
+        if (question.answer < 1 || question.answer > 5) {
+          return false;
+        }
+        
+        return true;
+      });
     }
     
     return {
