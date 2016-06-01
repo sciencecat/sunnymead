@@ -8,7 +8,7 @@
   routes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
   function routes($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/app/quiz');
+    $urlRouterProvider.otherwise('/app/result');
 
     $stateProvider.state('app', {
       url: '/app',

@@ -8,10 +8,10 @@
   QuestionsRepository.$inject = ['Questions', '$localStorage'];
 
   function QuestionsRepository(Questions, $localStorage) {
-    var storage = $localStorage.questions || Questions;
+    $localStorage.questions = $localStorage.questions || Questions;
     
     function get() {
-      return angular.copy(storage);
+      return angular.copy($localStorage.questions);
     }
     
     function save(questions) {
@@ -19,7 +19,7 @@
         return false;
       }
       
-      storage.questions = questions;
+      $localStorage.questions = questions;
       return true;
     }
     

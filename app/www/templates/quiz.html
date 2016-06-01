@@ -9,7 +9,7 @@
         <span ng-bind="question.text"></span>
       </div>
       <div class="item item-text-wrap">
-        <answerer ng-model="question.answer"></answerer>
+        <answerer ng-model="question.answer" on-answer="vm.saveQuestions()"></answerer>
       </div>
     </div>
 

@@ -11,7 +11,10 @@
     var vm = this;
 
     vm.questions = QuestionsRepository.get();
-    console.log(vm.questions);
+    
+    vm.saveQuestions = function () {
+      QuestionsRepository.save(vm.questions);
+    }
   }
 
 })();
