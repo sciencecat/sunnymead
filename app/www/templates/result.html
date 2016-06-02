@@ -1,7 +1,7 @@
 <ion-view view-title="Questionário">
   <ion-content class="padding">
 
-    <div ng-if="!vm.quiz">
+    <div ng-if="!vm.result">
       <div class="row">
         <div class="col text-center">
           <h2 class="text-gray">
@@ -23,8 +23,8 @@
       </div>
     </div>
 
-    <div ng-if="vm.quiz">
-      {{ vm.quiz }}
+    <div ng-if="vm.result">
+      {{ vm.result }}
     </div>
 
   </ion-content>

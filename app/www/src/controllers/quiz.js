@@ -5,9 +5,9 @@
     .module('app')
     .controller('QuizController', QuizController);
 
-  QuizController.$inject = ['QuestionsRepository'];
+  QuizController.$inject = ['$state', 'QuestionsRepository', 'Result', 'ResultRepository'];
 
-  function QuizController(QuestionsRepository) {
+  function QuizController($state, QuestionsRepository, Result, ResultRepository) {
     var vm = this;
 
     vm.questions = QuestionsRepository.get();
@@ -16,6 +16,17 @@
     
     vm.saveQuestions = function () {
       QuestionsRepository.save(vm.questions);
+    };
+    
+    vm.finish = function () {
+      if (!QuestionsRepository.isValid()) {
+        return;
+      }
+      
+      var result = Result.create(vm.questions);
+      ResultRepository.save(result);
+      
+      $state.go('app.result');
     }
 
     // Debug
