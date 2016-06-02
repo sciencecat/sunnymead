@@ -5,12 +5,14 @@
     .module('app')
     .controller('ResultController', ResultController);
 
-  ResultController.$inject = [];
+  ResultController.$inject = ['$ionicHistory', 'ResultRepository'];
 
-  function ResultController() {
+  function ResultController($ionicHistory, ResultRepository) {
     var vm = this;
+    
+    $ionicHistory.removeBackView();
 
-    vm.quiz = null;
+    vm.result = ResultRepository.get();
   }
 
 })();

@@ -18,7 +18,8 @@
     <a class="button button-outline  button-block"
        ng-class="{ 'button-assertive': !vm.isValid(), 'button-balanced': vm.isValid() }"
        ng-disabled="!vm.isValid()"
-       ng-bind="vm.isValid() ? 'Finalizar' : 'Responda a todas as perguntas'"></a>
+       ng-bind="vm.isValid() ? 'Finalizar' : 'Responda a todas as perguntas'"
+       ng-click="vm.finish()"></a>
 
     <div class="list" ng-if="vm.debug">
       <div class="item">
