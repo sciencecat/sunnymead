@@ -5,11 +5,11 @@
     .module('app')
     .controller('QuizController', QuizController);
 
-  QuizController.$inject = ['$state', 'QuestionsRepository', 'Result', 'ResultRepository'];
+  QuizController.$inject = ['$state', 'QuestionsRepository', 'Result', 'ResultRepository', '$ionicHistory'];
 
-  function QuizController($state, QuestionsRepository, Result, ResultRepository) {
+  function QuizController($state, QuestionsRepository, Result, ResultRepository, $ionicHistory) {
     var vm = this;
-
+    
     vm.questions = QuestionsRepository.get();
     
     vm.isValid = QuestionsRepository.isValid;

@@ -9,53 +9,59 @@
 
   function Result() {
     function create(questions) {
-      var totals = calculateTotals(questions);
-
+      var totals = sortTotals(calculateTotals(questions));
+      
       return {
         totals: totals,
-        firstPlace: findFirstPlace(totals),
-        secondPlace: findSecondPlace(totals),
-        lastPlace: findLastPlace(totals),
+        firstPlaces: getTypesOn(totals, 'first'),
+        secondPlaces: getTypesOn(totals, 'second'),
+        lastPlaces: getTypesOn(totals, 'last'),
         questions: questions
       };
     }
     
     function calculateTotals(questions) {
       return questions
-        .reduce(function (totals, question) {
-          totals[question.type] = (totals[question.type] || 0) + question.answer;
-          return totals;
-        }, {});
+        .reduce(function (result, question) {
+          var item = result.filter(function (r) {
+            return r.type === question.type;
+          })[0];
+          
+          if (!item) {
+            result.push({ type: question.type, total: question.answer });
+            return result;
+          }
+          
+          item.total += question.answer;
+          return result;
+        }, []);
     }
     
-    function findFirstPlace(totals) {
-      var types = Object.keys(totals);
-      
-      types.sort(function (left, right) {
-        return totals[right] - totals[left];
+    function sortTotals(totals) {
+      return totals.sort(function (left, right) {
+        return right.total - left.total;
       });
-      
-      return types[0];
     }
     
-    function findSecondPlace(totals) {
-      var types = Object.keys(totals);
-      
-      types.sort(function (left, right) {
-        return totals[right] - totals[left];
+    function getTypesOn(totals, index) {
+      var scores = totals.map(function (item) {  return item.total; });
+      var uniqueScores = scores.filter(function (total, i) {
+        return scores.indexOf(total) === i;
       });
       
-      return types[1];
-    }
-    
-    function findLastPlace(totals) {
-      var types = Object.keys(totals);
+      var indexEnum = {
+        'first': 0,
+        'second': 1,
+        'last': uniqueScores.length - 1
+      };
       
-      types.sort(function (left, right) {
-        return totals[right] - totals[left];
-      });
-      
-      return types[types.length - 1];
+      return totals
+        .filter(function (item) {
+          return item.total === uniqueScores[indexEnum[index]];
+        })
+        .map(function (item) {
+          return item.type;
+        });
     }
     
     return {
