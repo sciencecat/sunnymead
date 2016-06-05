@@ -3,7 +3,8 @@
 
   angular
     .module('app')
-    .config(routes);
+    .config(routes)
+    .run(redirection);
 
   routes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
@@ -29,6 +30,7 @@
 
     $stateProvider.state('app.result', {
       url: '/result',
+      cache: false,
       views: {
         'app-quiz': {
           controller: 'ResultController',
@@ -46,6 +48,18 @@
           controllerAs: 'vm',
           templateUrl: 'templates/quiz.html'
         }
+      }
+    });
+  }
+  
+  redirection.$inject = ['$rootScope', '$state', 'ResultRepository'];
+  
+  function redirection($rootScope, $state, ResultRepository) {
+    
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+      if (toState.name === 'app.quiz' && ResultRepository.get()) {
+        event.preventDefault();
+        $state.go('app.result');
       }
     });
   }

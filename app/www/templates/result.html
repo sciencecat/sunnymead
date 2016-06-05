@@ -1,6 +1,7 @@
 <ion-view view-title="Questionário">
   <ion-content class="padding">
 
+    <!-- Empty Result -->
     <div ng-if="!vm.result">
       <div class="row">
         <div class="col text-center">
@@ -23,9 +24,53 @@
       </div>
     </div>
 
+    <!-- Result -->
     <div ng-if="vm.result">
-      {{ vm.result }}
+      
+      <!-- First Places -->
+      <h1>First</h1>
+      <div class="card" ng-repeat="item in vm.result.firstPlaces">
+        <div class="item item-text-wrap">
+          <h2>{{ item }}</h2>
+          <p>{{ vm.getTypeDescription(item) }}</p>
+        </div>
+      </div>
+      
+      <!-- Second Places -->
+      <h1>Second</h1>
+      <div class="card" ng-repeat="item in vm.result.secondPlaces">
+        <div class="item item-text-wrap">
+          <h2>{{ item }}</h2>
+          <p>{{ vm.getTypeDescription(item) }}</p>
+        </div>
+      </div>
+      
+      <!-- Chart -->
+      <canvas id="radar"
+              width="100%"
+              height="100%"
+              class="chart chart-radar"
+              chart-data="vm.chartData"
+              chart-options="vm.chartOptions"
+              chart-labels="vm.chartLabels">
+      </canvas> 
+      
+      <!-- Last Places -->
+      <h1>Last</h1>
+      <div class="card" ng-repeat="item in vm.result.lastPlaces">
+        <div class="item item-text-wrap">
+          <h2>{{ item }}</h2>
+          <p>{{ vm.getTypeDescription(item) }}</p>
+        </div>
+      </div>
+      
+      
+      <!-- Debug -->
+      <div>
+        <h2>DEBUG</h2>
+        {{ vm.result }}
+      </div>
     </div>
-
+    
   </ion-content>
 </ion-view>
