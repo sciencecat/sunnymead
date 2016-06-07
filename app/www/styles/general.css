@@ -22,3 +22,52 @@
 .text-small {
   font-size: 10px;
 }
+
+.result-card {
+  display: flex;
+}
+
+.result-card h2 {
+  text-align: center;
+  margin-left: none;
+  padding-left: none;
+  border-left: none;
+  margin-right: 5%;
+  padding-right: 5%;
+  border-right: 1px dashed #CCC;
+}
+
+.result-card span:last-child {
+  font-size: 2.5em;
+}
+
+.result-card.result-card-right h2 {
+  margin-left: 5%;
+  padding-left: 5%;
+  border-left: 1px dashed #CCC;
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+.result-card.result-card-big h2 {
+  font-size: 1.3em;
+}
+
+.result-card.result-card-big p {
+  font-size: 1.1em;
+}
+
+.divider {
+  text-align: center;
+  border-bottom: 1px dotted #CCC;
+  margin-bottom: 25px;
+}
+
+.divider span {
+  background-color: white;
+  padding: 10px;
+  position: relative;
+  top: 10px;
+  color: #CCC;
+}

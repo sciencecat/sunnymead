@@ -15,6 +15,7 @@
     if (!vm.result) { return; }
     
     vm.chartOptions = {
+      tooltipTemplate: function(v) { return v.value; }
     };
     
     vm.chartLabels = vm.result.totals
