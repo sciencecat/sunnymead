@@ -28,24 +28,40 @@
     <div ng-if="vm.result">
       
       <!-- First Places -->
-      <h1>First</h1>
+      <div class="divider">
+        <span>Maior incidência</span>
+      </div>
+      
       <div class="card" ng-repeat="item in vm.result.firstPlaces">
-        <div class="item item-text-wrap">
-          <h2>{{ item }}</h2>
+        <div class="item item-text-wrap result-card result-card-big">
+          <h2>
+            <span>Tipo</span>
+            <span>{{ item }}</span>
+          </h2>
           <p>{{ vm.getTypeDescription(item) }}</p>
         </div>
       </div>
       
       <!-- Second Places -->
-      <h1>Second</h1>
+      <div class="divider">
+        <span>Segunda maior incidência</span>
+      </div>
+      
       <div class="card" ng-repeat="item in vm.result.secondPlaces">
-        <div class="item item-text-wrap">
-          <h2>{{ item }}</h2>
+        <div class="item item-text-wrap result-card result-card-right">
           <p>{{ vm.getTypeDescription(item) }}</p>
+          <h2>
+            <span>Tipo</span>
+            <span>{{ item }}</span>
+          </h2>
         </div>
       </div>
       
       <!-- Chart -->
+      <div class="divider">
+        <span>Pontuação</span>
+      </div>
+      
       <canvas id="radar"
               width="100%"
               height="100%"
@@ -56,14 +72,29 @@
       </canvas> 
       
       <!-- Last Places -->
-      <h1>Last</h1>
+      <div class="divider">
+        <span>Menor incidência</span>
+      </div>
+      
       <div class="card" ng-repeat="item in vm.result.lastPlaces">
-        <div class="item item-text-wrap">
-          <h2>{{ item }}</h2>
+        <div class="item item-text-wrap result-card">
+          <h2>
+            <span>Tipo</span>
+            <span>{{ item }}</span>
+          </h2>
           <p>{{ vm.getTypeDescription(item) }}</p>
         </div>
       </div>
       
+      <!-- Actions -->
+      <div class="divider">
+        <span>Ações</span>
+      </div>
+      
+      <div class="button-bar">
+        <a class="button button-balanced icon ion-email"></a>
+        <a class="button button-assertive icon ion-ios-trash"></a>
+      </div>
       
       <!-- Debug -->
       <div>
