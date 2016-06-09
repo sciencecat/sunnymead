@@ -9,7 +9,7 @@
 
   function ResultRepository($localStorage) {
     function get() {
-      return $localStorage.result;
+      return angular.copy($localStorage.result);
     }
     
     function save(result) {

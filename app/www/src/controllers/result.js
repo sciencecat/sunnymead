@@ -5,14 +5,18 @@
     .module('app')
     .controller('ResultController', ResultController);
 
-  ResultController.$inject = ['$scope', '$ionicHistory', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config'];
+  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config'];
 
-  function ResultController($scope, $ionicHistory, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config) {
+  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config) {
     var vm = this;
     
     vm.result = ResultRepository.get();
     
     if (!vm.result) { return; }
+    
+    vm.email = {
+      user: UserRepository.get()
+    };
     
     $ionicModal.fromTemplateUrl('templates/email.html', {
       scope: $scope,
@@ -40,44 +44,43 @@
     };
     
     vm.openEmailModal = function () {
-      vm.addEmail();
+      vm.addDestination();
       vm.modal.show();
     };
     
     vm.closeEmailModal = function () {
-      vm.emailList = [];
+      vm.email.destinations = [];
       vm.modal.hide();
     };
     
-    vm.addEmail = function () {
-      if (!angular.isArray(vm.emailList)) {
-        vm.emailList = [];
+    vm.addDestination = function () {
+      if (!angular.isArray(vm.email.destinations)) {
+        vm.email.destinations = [];
       }
       
-      vm.emailList.push({
-        destination: null
-      });
+      vm.email.destinations.push({ email: null });
     };
     
-    vm.getImageFromCanvas = function () {
-      var canvas = $document.find('canvas')[0];
+    vm.getValidDestinations = function () {
+      if (!vm.email.destinations) {
+        return [];
+      }
       
-      return canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
+      return vm.email.destinations.filter(function (e) { return e.email; });
     };
     
     vm.sendEmail = function () {
       $ionicLoading.show({ template: '<ion-spinner icon="spiral"></ion-spinner>' });
       
-      var form = new FormData();
+      UserRepository.save(vm.email.user);
       
-      form.append('destinations', vm.emailList.filter(function (email) { return email.destination; }));
-      form.append('result', vm.result);
-      form.append('image', vm.getImageFromCanvas());
+      var body = {
+        destinations: vm.getValidDestinations(),
+        user: vm.email.user,
+        result: vm.result,
+      };
       
-      $http.post(Config.sendEmailUrl, {
-        transformRequest: angular.identity,
-        headers: { 'Content-Type': undefined }
-      })
+      $http.post(Config.sendEmailUrl, body)
       .then(function (response) {
         $ionicPopup.alert({
          title: 'Enviado',
