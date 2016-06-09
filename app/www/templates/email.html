@@ -1,0 +1,20 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-balanced">
+    <h1 class="title">Enviar questionário</h1>
+    <button class="button button-clear button-primary" ng-click="vm.closeEmailModal()">Voltar</button>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="list" ng-repeat="email in vm.emailList">
+      <label class="item item-input">
+        <input ng-model="email.destination" type="email" placeholder="Email {{ $index + 1 }}">
+      </label>
+    </div>
+    <div class="divider">
+      <span>Enviar ou adicionar mais destinatários</span>
+    </div>
+    <div class="button-bar">
+      <button class="button button-balanced" ng-click="vm.addEmail()"><i class="icon ion-android-add"></i></button>
+      <button class="button button-positive" ng-click="vm.sendEmail()"><i class="icon ion-android-done"></i></button>
+    </div>
+  </ion-content>
+</ion-modal-view>
