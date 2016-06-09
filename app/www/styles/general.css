@@ -86,3 +86,7 @@
   top: 10px;
   color: #CCC;
 }
+
+input.ng-invalid:not(.ng-untouched) {
+  border-right: 5px solid #ef473a;
+}
