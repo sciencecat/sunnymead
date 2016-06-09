@@ -15,6 +15,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/k44/tcc#readme",
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.4",
     "morgan": "^1.7.0",
     "pm2": "^1.1.3",
