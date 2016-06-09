@@ -42,6 +42,7 @@
 
     $stateProvider.state('app.quiz', {
       url: '/quiz?page',
+      cache: false,
       views: {
         'app-quiz': {
           controller: 'QuizController',

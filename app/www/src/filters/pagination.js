@@ -10,7 +10,7 @@
   function pagination($state) {
     return function (items, steps) {
       if (!$state.params.page) {
-        $state.go('.', { page: 1 },  { notify: false });
+        $state.go('.', { page: 1 }, { notify: false });
         return;
       }
       
