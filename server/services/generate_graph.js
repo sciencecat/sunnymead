@@ -29,7 +29,8 @@ function generateGraph(message) {
         return reject(err);
       }
       
-      message.graphData = png;
+      const data = png.replace(/^data:image\/\w+;base64,/,"");
+      message.graphData = new Buffer(data, 'base64');
       
       return resolve(message);
     });
