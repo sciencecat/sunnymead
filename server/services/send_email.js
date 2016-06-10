@@ -1,4 +1,3 @@
-const fixture = require('./email_request_fixture');
 const parseBody = require('../utils/parse_body');
 const generateGraph = require('./generate_graph');
 const renderTemplate = require('./render_template');
