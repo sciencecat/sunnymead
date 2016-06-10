@@ -15,10 +15,12 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/k44/tcc#readme",
   "dependencies": {
+    "canvas": "^1.3.16",
     "cors": "^2.7.1",
+    "ejs": "^2.4.2",
     "express": "^4.13.4",
     "morgan": "^1.7.0",
-    "pdfkit": "^0.7.2",
+    "nchart": "^1.0.1",
     "pm2": "^1.1.3",
     "pmx": "^0.6.1"
   }

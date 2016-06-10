@@ -36,7 +36,7 @@
     vm.chartData = [vm.result.totals
       .sort(function (left, right) { return left.type - right.type; })
       .map(function (item) { return item.total; })];
-    
+      
     vm.getTypeDescription = function (type) {
       return Types.filter(function (item) {
         return item.type === type
