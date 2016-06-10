@@ -1,0 +1,66 @@
+<div style="font-family: arial; text-align: center; width: 600px;">
+  <h1>Resultado - 9Types</h1>
+  <div style="border-top: 1px solid #CCC; padding-bottom: 20px;">
+    <h2 style="color: #AAA; font-size: 16px;">Dados do usuario</h2>
+    <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="5">
+      <tr>
+        <td><b>Nome:</b></td>
+        <td><%= user.name %></td>
+      </tr>
+      <tr>
+        <td><b>Idade:</b></td>
+        <td><%= user.age %></td>
+      </tr>
+      <tr>
+        <td><b>Email:</b></td>
+        <td><%= user.email %></td>
+      </tr>
+    </table>
+  </div>
+  <div style="border-top: 1px solid #CCC; padding-bottom: 20px;">
+    <h2 style="color: #AAA; font-size: 16px;">Maior incidência</h2>
+    <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="10">
+      <% result.firstPlaces.forEach(function(firstPlace) { %>
+        <tr>
+          <td style="text-align: center;">
+            <p style="font-size: 24px; margin: 0;">Tipo</p>
+            <p style="font-size: 48px; margin: 0;"><%= firstPlace %></p>
+          </td>
+          <td>Descrição</td>
+        </tr>
+      <% }); %>
+    </table>
+  </div>
+  <div style="border-top: 1px solid #CCC; padding-bottom: 20px;">
+    <h2 style="color: #AAA; font-size: 16px;">Segunda maior incidência</h2>
+    <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="10">
+      <% result.secondPlaces.forEach(function(secondPlace) { %>
+        <tr>
+          <td style="text-align: center;">
+            <p style="font-size: 18px; margin: 0;">Tipo</p>
+            <p style="font-size: 36px; margin: 0;"><%= secondPlace %></p>
+          </td>
+          <td style="font-size: 12px">Descrição</td>
+        </tr>
+      <% }); %>
+    </table>
+  </div>
+  <div style="border-top: 1px solid #CCC; padding-bottom: 20px;">
+    <h2 style="color: #AAA; font-size: 16px;">Pontuação</h2>
+    <img src="cid:cqaqtqwqiqlqldqoqmqiqnqaqtqeqtqhqeqwqoqrqlqd"/>
+  </div>
+  <div style="border-top: 1px solid #CCC; padding-bottom: 20px;">
+    <h2 style="color: #AAA; font-size: 16px;">Menor incidência</h2>
+    <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="10">
+      <% result.lastPlaces.forEach(function(lastPlace) { %>
+        <tr style="border: 1px solid #CCC">
+          <td style="text-align: center;">
+            <p style="font-size: 18px; margin: 0;">Tipo</p>
+            <p style="font-size: 36px; margin: 0;"><%= lastPlace %></p>
+          </td>
+          <td style="font-size: 12px">Descrição</td>
+        </tr>
+      <% }); %>
+    </table>
+  </div>
+</div>
