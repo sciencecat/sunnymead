@@ -7,11 +7,17 @@ function sendToSendGrid(message) {
       from: message.user.email,
       subject: `${message.user.name} - Resultado da avaliação do Eneargrama`,
       html: message.html,
-      files: [{
-        filename: 'image.png',
-        content: message.graphData,
-        cid: 'cqaqtqwqiqlqldqoqmqiqnqaqtqeqtqhqeqwqoqrqlqd'
-      }]
+      files: [
+        {
+          filename: 'image.png',
+          content: message.graphData,
+          cid: 'cqaqtqwqiqlqldqoqmqiqnqaqtqeqtqhqeqwqoqrqlqd'
+        },
+        {
+          filename: 'resultado.pdf',
+          path: message.pdfFilename
+        }
+      ]
     });
     
     sendgrid.send(email, (err, res) => {
@@ -22,6 +28,7 @@ function sendToSendGrid(message) {
       if (res.message !== 'success') {
         return reject(res);
       }
+      
         
       return resolve(message);
     })

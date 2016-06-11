@@ -24,9 +24,9 @@
         <tr>
           <td style="text-align: center;">
             <p style="font-size: 24px; margin: 0;">Tipo</p>
-            <p style="font-size: 48px; margin: 0;"><%= firstPlace %></p>
+            <p style="font-size: 48px; margin: 0;"><%= firstPlace.type %></p>
           </td>
-          <td>Descrição</td>
+          <td><%= firstPlace.description %></td>
         </tr>
       <% }); %>
     </table>
@@ -36,11 +36,11 @@
     <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="10">
       <% result.secondPlaces.forEach(function(secondPlace) { %>
         <tr>
+          <td style="font-size: 12px"><%= secondPlace.description %></td>
           <td style="text-align: center;">
             <p style="font-size: 18px; margin: 0;">Tipo</p>
-            <p style="font-size: 36px; margin: 0;"><%= secondPlace %></p>
+            <p style="font-size: 36px; margin: 0;"><%= secondPlace.type %></p>
           </td>
-          <td style="font-size: 12px">Descrição</td>
         </tr>
       <% }); %>
     </table>
@@ -56,9 +56,9 @@
         <tr style="border: 1px solid #CCC">
           <td style="text-align: center;">
             <p style="font-size: 18px; margin: 0;">Tipo</p>
-            <p style="font-size: 36px; margin: 0;"><%= lastPlace %></p>
+            <p style="font-size: 36px; margin: 0;"><%= lastPlace.type %></p>
           </td>
-          <td style="font-size: 12px">Descrição</td>
+          <td style="font-size: 12px"><%= lastPlace.description %></td>
         </tr>
       <% }); %>
     </table>

@@ -4,7 +4,7 @@ const fs = require('fs');
 
 function generateGraph(message) {
   return new Promise((resolve, reject) => {
-    const canvas = new Canvas(480, 480);
+    const canvas = new Canvas(400, 400);
     const ctx = canvas.getContext('2d');
     const totals = message.result.totals.sort((left, right) => left.type - right.type);
     
@@ -29,7 +29,10 @@ function generateGraph(message) {
         return reject(err);
       }
       
+      message.graphDataBase64 = png + '';
+      
       const data = png.replace(/^data:image\/\w+;base64,/,"");
+      
       message.graphData = new Buffer(data, 'base64');
       
       return resolve(message);
