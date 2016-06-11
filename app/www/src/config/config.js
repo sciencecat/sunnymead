@@ -4,7 +4,7 @@
   angular
     .module('app')
     .constant('Config', {
-      sendEmailUrl: 'https://sunnymead-sciencecat.c9users.io/sendEmail'
+      sendEmailUrl: 'https://sunnymead-staging.herokuapp.com/sendEmail'
     });
   
 })();
