@@ -36,9 +36,9 @@
         <div class="item item-text-wrap result-card result-card-big">
           <h2>
             <span>Tipo</span>
-            <span>{{ item }}</span>
+            <span>{{ item.type }}</span>
           </h2>
-          <p>{{ vm.getTypeDescription(item) }}</p>
+          <p>{{ item.description }}</p>
         </div>
       </div>
       
@@ -49,10 +49,10 @@
       
       <div class="card" ng-repeat="item in vm.result.secondPlaces">
         <div class="item item-text-wrap result-card result-card-right">
-          <p>{{ vm.getTypeDescription(item) }}</p>
+          <p>{{ item.description }}</p>
           <h2>
             <span>Tipo</span>
-            <span>{{ item }}</span>
+            <span>{{ item.type }}</span>
           </h2>
         </div>
       </div>
@@ -80,9 +80,9 @@
         <div class="item item-text-wrap result-card">
           <h2>
             <span>Tipo</span>
-            <span>{{ item }}</span>
+            <span>{{ item.type }}</span>
           </h2>
-          <p>{{ vm.getTypeDescription(item) }}</p>
+          <p>{{ item.description }}</p>
         </div>
       </div>
       

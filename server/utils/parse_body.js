@@ -4,15 +4,11 @@ function parseBody(request) {
     
     request.on('data', (chunk) => body += chunk);
     request.on('end', () => {
-      if (request.headers['content-type'] === 'application/json') {
-        try {
-          return resolve(JSON.parse(body));
-        } catch(e) {
-          return reject(e);
-        }
+      try {
+        return resolve(JSON.parse(body));
+      } catch(e) {
+        return resolve(body);
       }
-      
-      return resolve(body);
     });
   });
 }

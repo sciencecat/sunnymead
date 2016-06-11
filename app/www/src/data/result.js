@@ -5,9 +5,9 @@
     .module('app')
     .service('Result', Result);
 
-  Result.$inject = [];
+  Result.$inject = ['Types'];
 
-  function Result() {
+  function Result(Types) {
     function create(questions) {
       var totals = sortTotals(calculateTotals(questions));
       
@@ -15,8 +15,7 @@
         totals: totals,
         firstPlaces: getTypesOn(totals, 'first'),
         secondPlaces: getTypesOn(totals, 'second'),
-        lastPlaces: getTypesOn(totals, 'last'),
-        questions: questions
+        lastPlaces: getTypesOn(totals, 'last')
       };
     }
     
@@ -34,7 +33,19 @@
           
           item.total += question.answer;
           return result;
-        }, []);
+        }, [])
+        .map(function (question) {
+          // explaining calculation made on question.answer / 10
+          // the maximum points that all answer can reach is 50
+          // its because there is 5 points limit on each question
+          // and there is 10 questions for one type
+          // scaling this:
+          // question.answer ------ 50
+          // total ----------------- 5
+          // total = (question.answer * 5) / 50 = question.answer / 10
+          question.total = question.total / 10;
+          return question;
+        });
     }
     
     function sortTotals(totals) {
@@ -44,7 +55,7 @@
     }
     
     function getTypesOn(totals, index) {
-      var scores = totals.map(function (item) {  return item.total; });
+      var scores = totals.map(function (item) { return item.total; });
       var uniqueScores = scores.filter(function (total, i) {
         return scores.indexOf(total) === i;
       });
@@ -60,7 +71,9 @@
           return item.total === uniqueScores[indexEnum[index]];
         })
         .map(function (item) {
-          return item.type;
+          return Types.filter(function (type) {
+            return type.type === item.type;
+          })[0];
         });
     }
     

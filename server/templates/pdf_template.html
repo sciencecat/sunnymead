@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div style="font-family: arial; text-align: center;">
+      <h1 style="font-size: 18px">Resultado - 9Types</h1>
+      <div style="border-top: 1px solid #CCC; padding-bottom: 10px;">
+        <h2 style="color: #AAA; font-size: 10px;">Dados do usuario</h2>
+        <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="5">
+          <tr>
+            <td style="font-size: 12px"><b>Nome:</b></td>
+            <td style="font-size: 12px"><%= user.name %></td>
+          </tr>
+          <tr>
+            <td style="font-size: 12px"><b>Idade:</b></td>
+            <td style="font-size: 12px"><%= user.age %></td>
+          </tr>
+          <tr>
+            <td style="font-size: 12px"><b>Email:</b></td>
+            <td style="font-size: 12px"><%= user.email %></td>
+          </tr>
+        </table>
+      </div>
+      <div style="border-top: 1px solid #CCC; padding-bottom: 10px;">
+        <h2 style="color: #AAA; font-size: 10px;">Maior incidência</h2>
+        <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="10">
+          <% result.firstPlaces.forEach(function(firstPlace) { %>
+            <tr>
+              <td style="text-align: center;">
+                <p style="font-size: 18px; margin: 0;">Tipo</p>
+                <p style="font-size: 36px; margin: 0;"><%= firstPlace.type %></p>
+              </td>
+              <td style="font-sizze: 12px"><%= firstPlace.description %></td>
+            </tr>
+          <% }); %>
+        </table>
+      </div>
+      <div style="border-top: 1px solid #CCC; padding-bottom: 10px;">
+        <h2 style="color: #AAA; font-size: 10px;">Segunda maior incidência</h2>
+        <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="10">
+          <% result.secondPlaces.forEach(function(secondPlace) { %>
+            <tr>
+              <td style="text-align: center;">
+                <p style="font-size: 12px; margin: 0;">Tipo</p>
+                <p style="font-size: 24px; margin: 0;"><%= secondPlace.type %></p>
+              </td>
+              <td style="font-size: 10px"><%= secondPlace.description %></td>
+            </tr>
+          <% }); %>
+        </table>
+      </div>
+      <div style="border-top: 1px solid #CCC; padding-bottom: 10px;">
+        <h2 style="color: #AAA; font-size: 10px;">Pontuação</h2>
+        <img src="<%= graphDataBase64 %>"/>
+      </div>
+      <div style="border-top: 1px solid #CCC; padding-bottom: 10px;">
+        <h2 style="color: #AAA; font-size: 10px;">Menor incidência</h2>
+        <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="10">
+          <% result.lastPlaces.forEach(function(lastPlace) { %>
+            <tr style="border: 1px solid #CCC">
+              <td style="text-align: center;">
+                <p style="font-size: 12px; margin: 0;">Tipo</p>
+                <p style="font-size: 24px; margin: 0;"><%= lastPlace.type %></p>
+              </td>
+              <td style="font-size: 10px"><%= lastPlace.description %></td>
+            </tr>
+          <% }); %>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

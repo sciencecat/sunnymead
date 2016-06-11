@@ -36,12 +36,6 @@
     vm.chartData = [vm.result.totals
       .sort(function (left, right) { return left.type - right.type; })
       .map(function (item) { return item.total; })];
-      
-    vm.getTypeDescription = function (type) {
-      return Types.filter(function (item) {
-        return item.type === type
-      })[0].description;
-    };
     
     vm.openEmailModal = function () {
       vm.addDestination();
@@ -88,10 +82,16 @@
          okType: 'button-positive'
        });
       })
-      .catch(function (error) {
+      .catch(function (response) {
+        var template = 'Não foi possível enviar. Verifique se sua conexão com a internet está estável.';
+        
+        if (response.status === 400 && response.data.error) {
+          template = '<p><b>Houve um erro ao enviar os emails. Segue a mensagem do serviço:</b><p>' +
+                     '<text-area disabled="true">' + response.data.error + '</text-area>';
+        }
         $ionicPopup.alert({
          title: 'Não foi possível enviar',
-         template: 'Não foi possível enviar. Verifique se sua conexão com a internet está estável.',
+         template: template,
          okType: 'button-assertive'
        });
       })
