@@ -5,9 +5,9 @@
     .module('app')
     .controller('ResultController', ResultController);
 
-  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config', 'PdfService'];
+  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config'];
 
-  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config, PdfService) {
+  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config) {
     var vm = this;
     
     vm.result = ResultRepository.get();
@@ -105,10 +105,6 @@
         vm.closeEmailModal();
         $ionicLoading.hide();
       });
-    };
-    
-    vm.downloadPdf = function () {
-      PdfService.download(vm.result);
     };
     
     vm.cleanStorage = function () {

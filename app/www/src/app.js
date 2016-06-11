@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app', ['ionic', 'ngStorage', 'chart.js', 'ngCordova'])
+    .module('app', ['ionic', 'ngStorage', 'chart.js'])
     .config(config)
     .run(run);
 
