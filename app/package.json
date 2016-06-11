@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "9Types",
   "version": "1.1.1",
-  "description": "app: An Ionic project",
+  "description": "9Types: Eneargrama",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
