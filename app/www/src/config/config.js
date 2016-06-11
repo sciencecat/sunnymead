@@ -4,7 +4,7 @@
   angular
     .module('app')
     .constant('Config', {
-      sendEmailUrl: 'https://sunnymead-staging.herokuapp.com/sendEmail'
+      sendEmailUrl: 'https://sunnymead.herokuapp.com/sendEmail'
     });
   
 })();
