@@ -5,15 +5,15 @@
     .module('app')
     .factory('UserRepository', UserRepository);
 
-  UserRepository.$inject = ['$localStorage'];
+  UserRepository.$inject = ['$localStorage', 'Config'];
 
-  function UserRepository($localStorage) {
+  function UserRepository($localStorage, Config) {
     function get() {
-      return angular.copy($localStorage.user);
+      return angular.copy($localStorage[Config.userStorageKey]);
     }
     
     function save(user) {
-      $localStorage.user= user;
+      $localStorage[Config.userStorageKey] = user;
     }
     
     return {

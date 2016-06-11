@@ -5,23 +5,23 @@
     .module('app')
     .factory('QuestionsRepository', QuestionsRepository);
 
-  QuestionsRepository.$inject = ['Questions', '$localStorage', '$filter'];
+  QuestionsRepository.$inject = ['Questions', '$localStorage', '$filter', 'Config'];
 
-  function QuestionsRepository(Questions, $localStorage, $filter) {
+  function QuestionsRepository(Questions, $localStorage, $filter, Config) {
     function reset() {
-      $localStorage.questions = $localStorage.questions || $filter('shuffle')(Questions);
+      $localStorage[Config.questionsStorageKey] = $localStorage[Config.questionsStorageKey] || $filter('shuffle')(Questions);
     }
     
     function get() {
-      if (!$localStorage.questions) {
+      if (!$localStorage[Config.questionsStorageKey]) {
         reset();
       }
       
-      return angular.copy($localStorage.questions);
+      return angular.copy($localStorage[Config.questionsStorageKey]);
     }
     
     function save(questions) {
-      $localStorage.questions = questions;
+      $localStorage[Config.questionsStorageKey] = questions;
     }
     
     function isAnswerValid(question) {
@@ -33,8 +33,8 @@
     }
     
     function isValid() {
-      return $localStorage.questions && 
-             $localStorage.questions.every(isAnswerValid);
+      return $localStorage[Config.questionsStorageKey] && 
+             $localStorage[Config.questionsStorageKey].every(isAnswerValid);
     }
     
     return {

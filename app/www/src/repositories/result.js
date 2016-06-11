@@ -5,15 +5,15 @@
     .module('app')
     .factory('ResultRepository', ResultRepository);
 
-  ResultRepository.$inject = ['$localStorage'];
+  ResultRepository.$inject = ['$localStorage', 'Config'];
 
-  function ResultRepository($localStorage) {
+  function ResultRepository($localStorage, Config) {
     function get() {
-      return angular.copy($localStorage.result);
+      return angular.copy($localStorage[Config.resultStorageKey]);
     }
     
     function save(result) {
-      $localStorage.result = result;
+      $localStorage[Config.resultStorageKey] = result;
     }
     
     return {
