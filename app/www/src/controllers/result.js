@@ -84,11 +84,17 @@
       })
       .catch(function (response) {
         var template = 'Não foi possível enviar. Verifique se sua conexão com a internet está estável.';
-        
-        if (response.status === 400 && response.data.error) {
-          template = '<p><b>Houve um erro ao enviar os emails. Segue a mensagem do serviço:</b><p>' +
-                     '<text-area disabled="true">' + response.data.error + '</text-area>';
+
+        if (response.status === 404) {
+	  template = 'Não foi possível conectar o serviço de emails. Tente novamente mais tarde';
         }
+        
+        if (response.status === 400 && response.data) {
+          template = '<p><b>Houve um erro ao enviar os emails. Segue a mensagem do serviço:</b><p>';
+        }
+
+        template += '<text-area disabled="true">' + response.status + ': ' + response.data + '</text-area>';
+
         $ionicPopup.alert({
          title: 'Não foi possível enviar',
          template: template,
