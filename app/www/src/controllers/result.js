@@ -5,9 +5,9 @@
     .module('app')
     .controller('ResultController', ResultController);
 
-  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config'];
+  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config', 'PdfService'];
 
-  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config) {
+  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config, PdfService) {
     var vm = this;
     
     vm.result = ResultRepository.get();
@@ -86,7 +86,7 @@
         var template = 'Não foi possível enviar. Verifique se sua conexão com a internet está estável.';
 
         if (response.status === 404) {
-	  template = 'Não foi possível conectar o serviço de emails. Tente novamente mais tarde';
+      	  template = 'Não foi possível conectar o serviço de emails. Tente novamente mais tarde';
         }
         
         if (response.status === 400 && response.data) {
@@ -105,6 +105,10 @@
         vm.closeEmailModal();
         $ionicLoading.hide();
       });
+    };
+    
+    vm.downloadPdf = function () {
+      PdfService.download(vm.result);
     };
     
     vm.cleanStorage = function () {
