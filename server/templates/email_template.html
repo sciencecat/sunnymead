@@ -36,11 +36,11 @@
     <table style="border: none; width: 600px; padding-left: 50px; padding-right: 50px" cellpadding="10">
       <% result.secondPlaces.forEach(function(secondPlace) { %>
         <tr>
-          <td style="font-size: 12px"><%= secondPlace.description %></td>
           <td style="text-align: center;">
             <p style="font-size: 18px; margin: 0;">Tipo</p>
             <p style="font-size: 36px; margin: 0;"><%= secondPlace.type %></p>
           </td>
+          <td style="font-size: 12px"><%= secondPlace.description %></td>
         </tr>
       <% }); %>
     </table>
