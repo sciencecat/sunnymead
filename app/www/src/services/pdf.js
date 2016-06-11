@@ -5,11 +5,17 @@
     .module('app')
     .service('PdfService', PdfService);
     
-  PdfService.$inject = [];
+  PdfService.$inject = ['$cordovaFile'];
     
-  function PdfService() {
+  function PdfService($cordovaFile) {
     this.download = function (result) {
-      alert('hooo');
+      $cordovaFile
+        .writeFile(cordova.file.dataDirectory, "file.txt", "text", true)
+        .then(function (success) {
+          alert(JSON.stringify(success));
+        }, function (error) {
+          alert(JSON.stringify(error));
+        });
     };
   }
   
