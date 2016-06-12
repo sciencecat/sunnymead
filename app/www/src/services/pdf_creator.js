@@ -16,7 +16,6 @@
         .then(function (pdfDocument) { return generateDataUrl(pdfDocument); })
         .then(function (pdfDataUrl) { 
           $ionicLoading.hide(); 
-          console.log(pdfDataUrl);
           window.open(pdfDataUrl, '_blank');
           return;
         })
@@ -118,7 +117,7 @@
         }     
 
         function gotFS(fileSystem) {
-          fileSystem.root.getFile('rptSample.pdf', { create: true, exclusive: false }, gotFileEntry, reject);
+          fileSystem.root.getFile('eneargrama.pdf', { create: true, exclusive: false }, gotFileEntry, reject);
         }
 
         function gotFileEntry(fileEntry) {
