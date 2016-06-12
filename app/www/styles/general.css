@@ -27,10 +27,23 @@ a.button.activated {
   opacity: 1;
 }
 
+.card .item:last-child {
+  text-align: right;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 10px;
+  border: none;
+}
+
+.card .item:last-child a {
+  font-size: 0.7em;
+}
+
 .result-card {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5px;
 }
 
 .hidden {
@@ -45,7 +58,7 @@ a.button.activated {
   padding-left: 0;
   border-left: none;
   padding-right: 5%;
-  width: 25%;
+  width: 21%;
   border-right: 1px dashed #CCC;
 }
 
@@ -54,11 +67,13 @@ a.button.activated {
   padding-right: 0;
   border-right: none;
   padding-left: 5%;
-  width: 75%;
+  width: 79%;
+  font-size: 0.8em;
 }
 
 .result-card h2 span:first-child {
   display: block;
+  font-size: 1em;
 }
 
 .result-card h2 span:last-child {
@@ -66,21 +81,12 @@ a.button.activated {
   font-size: 2.5em;
 }
 
-.result-card.result-card-right h2 {
-  margin-left: 5%;
-  padding-left: 5%;
-  border-left: 1px dashed #CCC;
-  margin-right: 0;
-  padding-right: 0;
-  border-right: none;
-}
-
 .result-card.result-card-big h2 {
   font-size: 1.3em;
 }
 
 .result-card.result-card-big p {
-  font-size: 1.1em;
+  font-size: 0.9em;
 }
 
 .divider {
@@ -99,4 +105,12 @@ a.button.activated {
 
 input.ng-invalid:not(.ng-untouched) {
   border-right: 5px solid #ef473a;
+}
+
+.last-place h2 {
+  color: #ef473a;
+}
+
+.last-place p {
+  color: #ef473a;
 }

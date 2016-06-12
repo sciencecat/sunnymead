@@ -6,39 +6,48 @@
     .constant('Types', [
       {
         "type": 1,
-        "description": "magna excepteur et cillum proident incididunt esse fugiat est ipsum amet ex ipsum"
+        "title": "Perfeccionista",
+        "description": "Apesar de determinado e com um senso prático invejável, você pode ser visto como hostil e teimoso em sua tomada de decisão."
       },
       {
         "type": 2,
-        "description": "ex cillum qui laboris irure aliqua proident excepteur non consequat labore do non"
+        "title": "Prestativo",
+        "description": "Apesar de perceptivo, cativante e carismático, você pode ser visto como muito apegado e, por vezes, prepotente."
       },
       {
         "type": 3,
-        "description": "aliqua nulla ut sunt occaecat consequat sit est officia laboris non cupidatat minim"
+        "title": "Bem-sucedido",
+        "description": "Focado, motivado e flexível, mas também um tanto quanto manipulador, frenético e, às vezes, com baixa auto-estima."
       },
       {
         "type": 4,
-        "description": "ad do veniam non duis amet nisi fugiat dolore cillum reprehenderit in sunt consequat"
+        "title": "Romântico",
+        "description": "Você é criativo, detalhista e possui muita sensibilidade, mas é muito crítico, um pouco trágico e pode se sentir deprimido."
       },
       {
         "type": 5,
-        "description": "fugiat aliquip sunt ipsum consequat eu labore aute voluptate mollit incididunt velit"
+        "title": "Observador",
+        "description": "Analítico e ponderado, gosta de se especializar no que faz, mas pode ser visto como frio calculista e, muitas vezes, distante."
       },
       {
         "type": 6,
-        "description": "ea mollit magna ullamco occaecat ex exercitation elit consequat veniam non ad velit"
+        "title": "Questionador",
+        "description": "Você é desconfiado por natureza e, por isso, tende a saber onde se mete, mas acaba tendo muita ansiedade e medo de tudo."
       },
       {
         "type": 7,
-        "description": "labore eiusmod laboris veniam tempor fugiat officia ut labore sunt Lorem sunt culpa"
+        "title": "Sonhador",
+        "description": "Apesar de bem-humorado e muito criativo, você tende a se alienar de suas próprias dificuldades através do acúmulo de tarefas."
       },
       {
         "type": 8,
-        "description": "irure enim commodo incididunt dolore consequat sunt dolor voluptate culpa est"
+        "title": "Confrontador",
+        "description": "Você nasceu para liderar com a sua assertividade, sendo um realizador nato, mas pode ser muito intolerante, vingativo e agressivo."
       },
       {
         "type": 9,
-        "description": "cupidatat et ipsum commodo irure non aute et officia sit ea duis in labore qui"
+        "title": "Preservacionista",
+        "description": "Calmo e flexível, você é um mediador por natureza, mas pode ser muito inseguro e apático quando precisa tomar decisões."
       }
     ]);
 

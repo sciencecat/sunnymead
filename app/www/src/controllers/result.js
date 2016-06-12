@@ -55,6 +55,26 @@
     vm.chartData.unshift(vm.chartData.pop());
     vm.chartData = [vm.chartData.map(function (item) { return item.total; })];
     
+    vm.currentDetailModal = null;
+    
+    vm.openTypeDetailModal = function (type) {
+      $ionicModal.fromTemplateUrl('templates/type_' + type + '_detail.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function(modal) {
+        vm.currentDetailModal = modal;
+        vm.currentDetailModal.show();
+      });
+    };
+    
+    vm.closeDetailModal = function () {
+      if (vm.currentDetailModal) {
+        vm.currentDetailModal.hide();
+        vm.currentDetailModal = null;
+        vm.currentModalData = null;
+      }
+    };
+    
     vm.openEmailModal = function () {
       vm.addDestination();
       vm.modal.show();

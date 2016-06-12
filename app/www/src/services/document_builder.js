@@ -46,7 +46,7 @@
         console.log(item);
         return [
           [
-            { text: 'Type', fontSize: size, alignment: 'center', color: color || '#000' },
+            { text: 'Tipo', fontSize: size, alignment: 'center', color: color || '#000' },
             { text: String(item.type), fontSize: size * 2, alignment: 'center', color: color || '#000' }
           ],
           { text: item.description, fontSize: size * 0.75, color: color || '#000' }
