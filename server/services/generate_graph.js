@@ -7,6 +7,7 @@ function generateGraph(message) {
     const canvas = new Canvas(400, 400);
     const ctx = canvas.getContext('2d');
     const totals = message.result.totals.sort((left, right) => left.type - right.type);
+    totals.unshift(totals.pop());
     
     const data = {
       labels: totals.map((item) => `Tipo ${item.type} - ${item.total} pts`),
