@@ -43,4 +43,5 @@
     </platform>
     <plugin name="cordova-plugin-file" spec="~4.2.0" />
     <plugin name="cordova-plugin-file-opener2" spec="https://github.com/pwlin/cordova-plugin-file-opener2.git" />
+    <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist.git" />
 </widget>
