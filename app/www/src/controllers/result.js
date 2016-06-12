@@ -43,17 +43,17 @@
       animation: false
     };
     
-    vm.chartLabels = vm.result.totals
-      .sort(function (left, right) { return left.type - right.type; })
-      .map(function (item) { return item.type; });
+    vm.chartLabels = vm.result.totals.sort(function (left, right) { return left.type - right.type; });
+    vm.chartLabels.unshift(vm.chartLabels.pop());
+    vm.chartLabels = vm.chartLabels.map(function (item) { return item.type; });
       
-    vm.chartLabelsFull = vm.result.totals
-      .sort(function (left, right) { return left.type - right.type; })
-      .map(function (item) { return 'Tipo ' + item.type + ' - ' + item.total + ' pts'; });
+    vm.chartLabelsFull = vm.result.totals.sort(function (left, right) { return left.type - right.type; });
+    vm.chartLabelsFull.unshift(vm.chartLabelsFull.pop());
+    vm.chartLabelsFull = vm.chartLabelsFull.map(function (item) { return 'Tipo ' + item.type + ' - ' + item.total + ' pts'; });
     
-    vm.chartData = [vm.result.totals
-      .sort(function (left, right) { return left.type - right.type; })
-      .map(function (item) { return item.total; })];
+    vm.chartData = vm.result.totals.sort(function (left, right) { return left.type - right.type; });
+    vm.chartData.unshift(vm.chartData.pop());
+    vm.chartData = [vm.chartData.map(function (item) { return item.total; })];
     
     vm.openEmailModal = function () {
       vm.addDestination();
