@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "9Types",
   "version": "1.1.1",
-  "description": "app: An Ionic project",
+  "description": "9Types: Eneargrama",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
@@ -13,5 +13,16 @@
     "bower": "^1.3.3",
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0"
-  }
+  },
+  "cordovaPlugins": [
+    {
+      "locator": "https://github.com/apache/cordova-plugin-whitelist.git",
+      "id": "cordova-plugin-whitelist"
+    },
+    "cordova-plugin-file",
+    "cordova-plugin-file-opener2"
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ]
 }

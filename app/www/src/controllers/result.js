@@ -5,9 +5,9 @@
     .module('app')
     .controller('ResultController', ResultController);
 
-  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config'];
+  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config', 'PDFCreatorService'];
 
-  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config) {
+  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config, PDFCreatorService) {
     var vm = this;
     
     vm.result = ResultRepository.get();
@@ -84,21 +84,31 @@
       })
       .catch(function (response) {
         var template = 'Não foi possível enviar. Verifique se sua conexão com a internet está estável.';
-        
-        if (response.status === 400 && response.data.error) {
-          template = '<p><b>Houve um erro ao enviar os emails. Segue a mensagem do serviço:</b><p>' +
-                     '<text-area disabled="true">' + response.data.error + '</text-area>';
+
+        if (response.status === 404) {
+      	  template = 'Não foi possível conectar o serviço de emails. Tente novamente mais tarde';
         }
+        
+        if (response.status === 400 && response.data) {
+          template = '<p><b>Houve um erro ao enviar os emails. Segue a mensagem do serviço:</b><p>';
+        }
+
+        template += '<text-area disabled="true">' + response.status + ': ' + response.data + '</text-area>';
+
         $ionicPopup.alert({
-         title: 'Não foi possível enviar',
-         template: template,
-         okType: 'button-assertive'
-       });
+          title: 'Não foi possível enviar',
+          template: template,
+          okType: 'button-assertive'
+        });
       })
       .finally(function () {
         vm.closeEmailModal();
         $ionicLoading.hide();
       });
+    };
+
+    vm.savePdf = function () {
+      PDFCreatorService.create(vm.result);
     };
     
     vm.cleanStorage = function () {
