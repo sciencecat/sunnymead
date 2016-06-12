@@ -18,7 +18,9 @@
     {
       "locator": "https://github.com/apache/cordova-plugin-whitelist.git",
       "id": "cordova-plugin-whitelist"
-    }
+    },
+    "cordova-plugin-file",
+    "cordova-plugin-file-opener2"
   ],
   "cordovaPlatforms": [
     "android"

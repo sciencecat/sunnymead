@@ -5,9 +5,9 @@
     .module('app')
     .controller('ResultController', ResultController);
 
-  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config'];
+  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config', 'PDFCreatorService'];
 
-  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config) {
+  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config, PDFCreatorService) {
     var vm = this;
     
     vm.result = ResultRepository.get();
@@ -96,15 +96,19 @@
         template += '<text-area disabled="true">' + response.status + ': ' + response.data + '</text-area>';
 
         $ionicPopup.alert({
-         title: 'Não foi possível enviar',
-         template: template,
-         okType: 'button-assertive'
-       });
+          title: 'Não foi possível enviar',
+          template: template,
+          okType: 'button-assertive'
+        });
       })
       .finally(function () {
         vm.closeEmailModal();
         $ionicLoading.hide();
       });
+    };
+
+    vm.savePdf = function () {
+      PDFCreatorService.create(vm.result);
     };
     
     vm.cleanStorage = function () {
