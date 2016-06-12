@@ -21,7 +21,11 @@ function generateGraph(message) {
     
     new Chart(ctx).Radar(data, {
       scaleShowValues: true, 
-      scaleFontSize: 24
+      scaleFontSize: 24,
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 1,
+      scaleStartValue: 0
     });
     
     canvas.toDataURL('image/png', (err, png) => {

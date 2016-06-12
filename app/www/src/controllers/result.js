@@ -26,12 +26,30 @@
     });
     
     vm.chartOptions = {
-      tooltipTemplate: function(v) { return v.value; }
+      tooltipTemplate: function(v) { return v.value; },
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 1,
+      scaleStartValue: 0
+    };
+    
+    vm.chartOptionsFull = {
+      tooltipTemplate: function(v) { return v.value; },
+      responsive: false,
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 1,
+      scaleStartValue: 0,
+      animation: false
     };
     
     vm.chartLabels = vm.result.totals
       .sort(function (left, right) { return left.type - right.type; })
       .map(function (item) { return item.type; });
+      
+    vm.chartLabelsFull = vm.result.totals
+      .sort(function (left, right) { return left.type - right.type; })
+      .map(function (item) { return 'Tipo ' + item.type + ' - ' + item.total + ' pts'; });
     
     vm.chartData = [vm.result.totals
       .sort(function (left, right) { return left.type - right.type; })
@@ -108,6 +126,7 @@
     };
 
     vm.savePdf = function () {
+      vm.result.graphImageURL = document.querySelector('#hidden-radar').toDataURL();
       PDFCreatorService.create(vm.result);
     };
     

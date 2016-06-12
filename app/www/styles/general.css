@@ -33,6 +33,12 @@ a.button.activated {
   align-items: center;
 }
 
+.hidden {
+  position: fixed;
+  left: -10000px;
+  top: -10000px;
+}
+
 .result-card h2 {
   text-align: center;
   margin-left: 0;
