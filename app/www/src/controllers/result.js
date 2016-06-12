@@ -26,7 +26,11 @@
     });
     
     vm.chartOptions = {
-      tooltipTemplate: function(v) { return v.value; }
+      tooltipTemplate: function(v) { return v.value; },
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 1,
+      scaleStartValue: 0
     };
     
     vm.chartLabels = vm.result.totals
