@@ -69,6 +69,15 @@
               chart-data="vm.chartData"
               chart-options="vm.chartOptions"
               chart-labels="vm.chartLabels">
+      </canvas>
+      
+      <canvas id="hidden-radar"
+              width="500"
+              height="500"
+              class="chart chart-radar hidden"
+              chart-data="vm.chartData"
+              chart-options="vm.chartOptionsFull"
+              chart-labels="vm.chartLabelsFull">
       </canvas> 
       
       <!-- Last Places -->
@@ -93,15 +102,9 @@
       
       <div class="button-bar">
         <a class="button button-balanced icon ion-email" ng-click="vm.openEmailModal()"></a>
+        <a class="button button-positive icon ion-ios-download" ng-click="vm.savePdf()"></a>
         <a class="button button-assertive icon ion-ios-trash" ng-click="vm.cleanStorage()"></a>
       </div>
-      
-      <!-- Debug -->
-      <div>
-        <h2>DEBUG</h2>
-        {{ vm.result }}
-      </div>
-    </div>
-    
+
   </ion-content>
 </ion-view>

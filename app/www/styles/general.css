@@ -23,10 +23,20 @@
   font-size: 10px;
 }
 
+a.button.activated {
+  opacity: 1;
+}
+
 .result-card {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  position: fixed;
+  left: -10000px;
+  top: -10000px;
 }
 
 .result-card h2 {
