@@ -1,32 +1,69 @@
 <ion-view view-title="Informações">
-  <ion-content class="padding clean-text-wrap">
+  <ion-content class="padding clean-text-wrap" padding="true">
     <div class="divider">
-      <span>Como responder</span>
+      <span>O Eneagrama</span>
     </div>
     
-    <p>Para que o teste tenha seu maior nível de precisão, não é necessário pensar muito, responda com a primeira coisa que passar pela sua cabeça, mas com sinceridade.</p>
+    <p>O objetivo do eneagrama é identificar seu tipo de personalidade, e com isso compreender quais as principais questões a se trabalhar para que você possa se tornar uma pessoa mais feliz e realizada.</p>
+    <p>Durante o questionário, você poderá notar traços de cada um dos nove tipos em si mesmo, mas através do Classificador Tipológico por Atitude Riso-Hudson encontraremos suporte para descartar os tipos que não lhe correspondem e determinar qual seu tipo básico com alto nível de precisão, assim como o tipo que menos lhe representa.</p>
     
     <div class="divider">
-      <span>Detalhes dos tipos</span>
+      <span>Os 9 tipos</span>
     </div>
     
-    <ul>
-      <li ng-repeat="item in vm.types">
-        <button class="button button-clear button-positive" ng-click="vm.openTypeDetailModal(item.type)">
-          Tipo {{ item.type }} - {{ item.title }}
-        </button>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(1)"><span>Tipo 1</span><span>O reformista</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(2)"><span>Tipo 2</span><span>O ajudante</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(3)"><span>Tipo 3</span><span>O realizador</span></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(4)"><span>Tipo 4</span><span>O individualista</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(5)"><span>Tipo 5</span><span>O investigador</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(6)"><span>Tipo 6</span><span>O partidário</span></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(7)"><span>Tipo 7</span><span>O entusiasta</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(8)"><span>Tipo 8</span><span>O desafiador</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(9)"><span>Tipo 9</span><span>O pacifista</span></a>
+      </div>
+    </div>
     
     <div class="divider">
-      <span>Eneargrama</span>
+      <span>O Medo Fundamental</span>
     </div>
+    <p>Os medos definidos para os nove tipos são universais, ou seja, qualquer um pode manifestar um medo que não seja relacionado ao seu tipo. Mas sempre existe um medo que se destaca entre os demais, tomando para si o título de medo fundamental. Seja o medo de errar, impor-se ou sentir-se muito à vontade em seu meio, o desconforto causado por um tende a se sobrepor àquele causado pelos demais. Este medo é algo que se constrói desde a primeira infância, resultado de uma mensagem que vem das figuras paterna e materna, ainda que de modo inconsciente, a respeito daquilo que fazemos ou deixamos de fazer.</p>
     
-    <p>A teoria do eneagrama pode ser aplicada em qualquer coisa que se queira, pois ele carrega em si um conceito que vai além do auto-conhecimento. A sabedoria que consiste em acreditar que o fim de um ciclo é apenas o início de outro, faz do processo contínuo algo que reflete a natureza do eneagrama: um círculo, um triângulo e uma hexade.</p>
-
-    <p>Através deste mundo de possibilidades, temos a presença do eneagrama em diversas tradições antigas e, no mundo moderno, chegamos à armênia, onde o filósofo Gurdjieff passa a utilizá-lo em sua busca por auto-conhecimento, mas foi apenas anos mais tarde que Oscar Ichazo, em 1950, um filósofo boliviano, pesquisou e sintetizou os vários elementos do eneagrama.</p>
+    <div class="divider">
+      <span>O Desejo Fundamental</span>
+    </div>
+    <p>Em sua infância, todos precisam ouvir determinadas frases e assimilar determinados conceitos. Sentir-se querido, amado, importante: são necessidades básicas em uma primeira infância para permitir que, enquanto ser humano, tal criança esteja apta a viver em sociedade de maneira plena. Porém, nem sempre todas as necessidades são atendidas como devem e, por conta dessas “lacunas”, desenvolve-se um medo - o medo fundamental. Tais lacunas tendem a ser preenchidas com vontades que venham a mitigar estes medos: a vontade de se fazer necessário, de ter valor, de ser competente. Estas vontades são os desejos fundamentais.</p>
     
-    <p>Em 1970, Claudio Naranjo, médico psiquiátrico, relacionou os estudos feitos por Ichazo às características da psique humana que conhecia e, deste modo, chegou àquilo que temos hoje nesse aplicativo.</p>
+    <div class="divider">
+      <span>O Convite</span>
+    </div>
+    <p>Por mais distante de si mesma que uma pessoa esteja, é fato que ela não perde a sua personalidade. Apesar de alguns resistirem e lutarem contra aquilo que são, inevitavelmente as pessoas retornam àquilo que eram e, nesse sentido, a mudança é algo temporário. Porém, apesar de isso ser visto como algo negativo, toda personalidade possui uma essência e, a despeito das ansiedades e dificuldades que vêm com ela, sempre existem os pontos positivos. O convite nada mais é do que uma sugestão de retorno, um lembrete a respeito do que há de melhor naquela personalidade: uma oportunidade de retornar e aceitar a sua essência.</p>
+    
+    <div class="divider">
+      <span>O Sinal de Alerta</span>
+    </div>
+    <p>Todos os tipos de personalidade possuem vícios: insegurança, gula e passividade são bons exemplos disso. Tais vícios devem ser evitados para que se possa viver uma vida saudável, sem grandes conflitos e problemas desnecessários em seu cotidiano. Porém não é incomum que alguém se flagre caminhando em direção a eles, ainda que a passos curtos. Quando isso ocorre, deve-se lembrar dos sinais de alerta, que nada mais são do que indicadores que buscam avisar quando se está prestes a sair da zona saudável de sua personalidade e começando a adentrar a zona dos vícios.</p>
     
   </ion-content>
 </ion-view>

@@ -124,7 +124,29 @@ input.ng-invalid:not(.ng-untouched) {
   line-height: 1.8em;
 }
 
+.clean-text-wrap p i {
+  font-style: italic;
+}
+
 .clean-text-wrap h4 {
   margin-bottom: 20px;
   text-align: center;
+}
+
+.clean-text-wrap .row {
+  padding: 0;
+}
+
+.clean-text-wrap .col {
+  padding: 3px;
+}
+
+.clean-text-wrap a span:first-child {
+  display: block;
+  font-size: 16px;
+}
+
+.clean-text-wrap a span:last-child {
+  display: block;
+  font-size: 11px;
 }

@@ -12,6 +12,14 @@
     
     vm.result = ResultRepository.get();
     
+    vm.showQuizStartPopup = function () {
+      $ionicPopup.alert({
+        title: 'Como responder o questionário',
+        template: '<p>Para que o teste tenha seu maior nível de precisão não é necessário pensar muito, responda com a primeira coisa que passar pela sua cabeça, mas com sinceridade.</p>',
+        okType: 'button-positive'
+      });
+    };
+    
     if (!vm.result) { return; }
     
     vm.email = {

@@ -2,7 +2,7 @@
 <widget id="com.ionicframework.app932238" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>9Types</name>
   <description>
-        Aplicativo para avaliação dos 9 tipos pelo método do Eneargrama.
+        Aplicativo para avaliação dos 9 tipos do Eneagrama.
     </description>
   <author email="sunnymead9@gmail.com" href="https://sunnymead.herokuapp.com/">
       Sunnymead
