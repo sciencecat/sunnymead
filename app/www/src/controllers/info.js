@@ -19,7 +19,7 @@
         return;
       }
       
-      $ionicModal.fromTemplateUrl('templates/type_' + type + '_detail.html', {
+      vm.currentDetailModal = $ionicModal.fromTemplateUrl('templates/type_' + type + '_detail.html', {
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function(modal) {
@@ -29,11 +29,12 @@
     };
     
     vm.closeDetailModal = function () {
-      if (vm.currentDetailModal) {
-        vm.currentDetailModal.hide();
-        vm.currentDetailModal = null;
-        vm.currentModalData = null;
+      if (!vm.currentDetailModal || !vm.currentDetailModal.hide) {
+        return;
       }
+      
+      vm.currentDetailModal.hide();
+      vm.currentDetailModal = null;
     };
   }
 

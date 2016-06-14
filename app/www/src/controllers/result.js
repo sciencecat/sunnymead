@@ -58,20 +58,27 @@
     vm.currentDetailModal = null;
     
     vm.openTypeDetailModal = function (type) {
-      $ionicModal.fromTemplateUrl('templates/type_' + type + '_detail.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-      }).then(function(modal) {
-        vm.currentDetailModal = modal;
-        vm.currentDetailModal.show();
-      });
+      if (vm.currentDetailModal) {
+        return;
+      }
+      
+      vm.currentDetailModal = $ionicModal
+        .fromTemplateUrl('templates/type_' + type + '_detail.html', {
+          scope: $scope,
+          animation: 'slide-in-up'
+        });
+        
+      vm.currentDetailModal
+        .then(function(modal) {
+          vm.currentDetailModal = modal;
+          vm.currentDetailModal.show();
+        });
     };
     
     vm.closeDetailModal = function () {
-      if (vm.currentDetailModal) {
+      if (vm.currentDetailModal && vm.currentDetailModal.hide) {
         vm.currentDetailModal.hide();
         vm.currentDetailModal = null;
-        vm.currentModalData = null;
       }
     };
     
