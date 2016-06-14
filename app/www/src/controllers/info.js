@@ -5,9 +5,36 @@
     .module('app')
     .controller('InfoController', InfoController);
 
-  InfoController.$inject = [];
+  InfoController.$inject = ['$ionicModal', '$scope', 'Types'];
 
-  function InfoController() {
+  function InfoController($ionicModal, $scope, Types) {
+    var vm = this;
+    
+    vm.types = Types;
+    
+    vm.currentDetailModal = null;
+    
+    vm.openTypeDetailModal = function (type) {
+      if (vm.currentDetailModal) {
+        return;
+      }
+      
+      $ionicModal.fromTemplateUrl('templates/type_' + type + '_detail.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function(modal) {
+        vm.currentDetailModal = modal;
+        vm.currentDetailModal.show();
+      });
+    };
+    
+    vm.closeDetailModal = function () {
+      if (vm.currentDetailModal) {
+        vm.currentDetailModal.hide();
+        vm.currentDetailModal = null;
+        vm.currentModalData = null;
+      }
+    };
   }
 
 })();

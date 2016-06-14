@@ -79,8 +79,8 @@
       function image() {
         return {
             image: result.graphImageURL,
-            width: 350,
-            height: 350,
+            width: 300,
+            height: 300,
             alignment: 'center'
       	};
       }

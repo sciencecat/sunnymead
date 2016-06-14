@@ -1,17 +1,32 @@
 <ion-view view-title="Informações">
-  <ion-content class="padding">
-    <h1>Informações</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </p>
-    <p>
-      Cras eros mi, tempus et ultricies at, sodales at quam. Quisque ullamcorper, urna ultricies cursus pharetra, quam ante egestas nunc, vitae euismod sapien lacus ut odio.
-    </p>
-    <p>
-      Phasellus hendrerit convallis sapien, et efficitur leo pellentesque non. Vestibulum in consectetur lorem, condimentum fringilla lectus. Ut in nibh cursus, semper nibh et, placerat leo. In a ante et sapien porta congue et quis lectus. Vestibulum molestie elit quis odio tempor, sit amet euismod velit scelerisque. Sed sed porttitor nibh, et commodo est. Donec consequat urna et eros luctus, sit amet bibendum dui fringilla.
-    </p>
-    <p>
-      Fusce eleifend, metus nec faucibus pellentesque, dolor nunc placerat enim, eget consequat leo velit eget libero. Nunc at elit ex.
-    </p>
+  <ion-content class="padding clean-text-wrap">
+    <div class="divider">
+      <span>Como responder</span>
+    </div>
+    
+    <p>Para que o teste tenha seu maior nível de precisão, não é necessário pensar muito, responda com a primeira coisa que passar pela sua cabeça, mas com sinceridade.</p>
+    
+    <div class="divider">
+      <span>Detalhes dos tipos</span>
+    </div>
+    
+    <ul>
+      <li ng-repeat="item in vm.types">
+        <button class="button button-clear button-positive" ng-click="vm.openTypeDetailModal(item.type)">
+          Tipo {{ item.type }} - {{ item.title }}
+        </button>
+      </li>
+    </ul>
+    
+    <div class="divider">
+      <span>Eneargrama</span>
+    </div>
+    
+    <p>A teoria do eneagrama pode ser aplicada em qualquer coisa que se queira, pois ele carrega em si um conceito que vai além do auto-conhecimento. A sabedoria que consiste em acreditar que o fim de um ciclo é apenas o início de outro, faz do processo contínuo algo que reflete a natureza do eneagrama: um círculo, um triângulo e uma hexade.</p>
+
+    <p>Através deste mundo de possibilidades, temos a presença do eneagrama em diversas tradições antigas e, no mundo moderno, chegamos à armênia, onde o filósofo Gurdjieff passa a utilizá-lo em sua busca por auto-conhecimento, mas foi apenas anos mais tarde que Oscar Ichazo, em 1950, um filósofo boliviano, pesquisou e sintetizou os vários elementos do eneagrama.</p>
+    
+    <p>Em 1970, Claudio Naranjo, médico psiquiátrico, relacionou os estudos feitos por Ichazo às características da psique humana que conhecia e, deste modo, chegou àquilo que temos hoje nesse aplicativo.</p>
+    
   </ion-content>
 </ion-view>
