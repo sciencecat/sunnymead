@@ -1,17 +1,69 @@
 <ion-view view-title="Informações">
-  <ion-content class="padding">
-    <h1>Informações</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </p>
-    <p>
-      Cras eros mi, tempus et ultricies at, sodales at quam. Quisque ullamcorper, urna ultricies cursus pharetra, quam ante egestas nunc, vitae euismod sapien lacus ut odio.
-    </p>
-    <p>
-      Phasellus hendrerit convallis sapien, et efficitur leo pellentesque non. Vestibulum in consectetur lorem, condimentum fringilla lectus. Ut in nibh cursus, semper nibh et, placerat leo. In a ante et sapien porta congue et quis lectus. Vestibulum molestie elit quis odio tempor, sit amet euismod velit scelerisque. Sed sed porttitor nibh, et commodo est. Donec consequat urna et eros luctus, sit amet bibendum dui fringilla.
-    </p>
-    <p>
-      Fusce eleifend, metus nec faucibus pellentesque, dolor nunc placerat enim, eget consequat leo velit eget libero. Nunc at elit ex.
-    </p>
+  <ion-content class="padding clean-text-wrap" padding="true">
+    <div class="divider">
+      <span>O Eneagrama</span>
+    </div>
+    
+    <p>O objetivo do eneagrama é identificar seu tipo de personalidade, e com isso compreender quais as principais questões a se trabalhar para que você possa se tornar uma pessoa mais feliz e realizada.</p>
+    <p>Durante o questionário, você poderá notar traços de cada um dos nove tipos em si mesmo, mas através do Classificador Tipológico por Atitude Riso-Hudson encontraremos suporte para descartar os tipos que não lhe correspondem e determinar qual seu tipo básico com alto nível de precisão, assim como o tipo que menos lhe representa.</p>
+    
+    <div class="divider">
+      <span>Os 9 tipos</span>
+    </div>
+    
+    <div class="row">
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(1)"><span>Tipo 1</span><span>O reformista</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(2)"><span>Tipo 2</span><span>O ajudante</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(3)"><span>Tipo 3</span><span>O realizador</span></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(4)"><span>Tipo 4</span><span>O individualista</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(5)"><span>Tipo 5</span><span>O investigador</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(6)"><span>Tipo 6</span><span>O partidário</span></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(7)"><span>Tipo 7</span><span>O entusiasta</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(8)"><span>Tipo 8</span><span>O desafiador</span></a>
+      </div>
+      <div class="col">
+        <a class="button button-block button-small button-outline button-positive" ng-click="vm.openTypeDetailModal(9)"><span>Tipo 9</span><span>O pacifista</span></a>
+      </div>
+    </div>
+    
+    <div class="divider">
+      <span>O Medo Fundamental</span>
+    </div>
+    <p>Os medos definidos para os nove tipos são universais, ou seja, qualquer um pode manifestar um medo que não seja relacionado ao seu tipo. Mas sempre existe um medo que se destaca entre os demais, tomando para si o título de medo fundamental. Seja o medo de errar, impor-se ou sentir-se muito à vontade em seu meio, o desconforto causado por um tende a se sobrepor àquele causado pelos demais. Este medo é algo que se constrói desde a primeira infância, resultado de uma mensagem que vem das figuras paterna e materna, ainda que de modo inconsciente, a respeito daquilo que fazemos ou deixamos de fazer.</p>
+    
+    <div class="divider">
+      <span>O Desejo Fundamental</span>
+    </div>
+    <p>Em sua infância, todos precisam ouvir determinadas frases e assimilar determinados conceitos. Sentir-se querido, amado, importante: são necessidades básicas em uma primeira infância para permitir que, enquanto ser humano, tal criança esteja apta a viver em sociedade de maneira plena. Porém, nem sempre todas as necessidades são atendidas como devem e, por conta dessas “lacunas”, desenvolve-se um medo - o medo fundamental. Tais lacunas tendem a ser preenchidas com vontades que venham a mitigar estes medos: a vontade de se fazer necessário, de ter valor, de ser competente. Estas vontades são os desejos fundamentais.</p>
+    
+    <div class="divider">
+      <span>O Convite</span>
+    </div>
+    <p>Por mais distante de si mesma que uma pessoa esteja, é fato que ela não perde a sua personalidade. Apesar de alguns resistirem e lutarem contra aquilo que são, inevitavelmente as pessoas retornam àquilo que eram e, nesse sentido, a mudança é algo temporário. Porém, apesar de isso ser visto como algo negativo, toda personalidade possui uma essência e, a despeito das ansiedades e dificuldades que vêm com ela, sempre existem os pontos positivos. O convite nada mais é do que uma sugestão de retorno, um lembrete a respeito do que há de melhor naquela personalidade: uma oportunidade de retornar e aceitar a sua essência.</p>
+    
+    <div class="divider">
+      <span>O Sinal de Alerta</span>
+    </div>
+    <p>Todos os tipos de personalidade possuem vícios: insegurança, gula e passividade são bons exemplos disso. Tais vícios devem ser evitados para que se possa viver uma vida saudável, sem grandes conflitos e problemas desnecessários em seu cotidiano. Porém não é incomum que alguém se flagre caminhando em direção a eles, ainda que a passos curtos. Quando isso ocorre, deve-se lembrar dos sinais de alerta, que nada mais são do que indicadores que buscam avisar quando se está prestes a sair da zona saudável de sua personalidade e começando a adentrar a zona dos vícios.</p>
+    
   </ion-content>
 </ion-view>

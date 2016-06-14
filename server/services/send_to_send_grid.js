@@ -5,7 +5,7 @@ function sendToSendGrid(message) {
     const email = new sendgrid.Email({
       to: message.destinations.map((destination) => destination.email),
       from: message.user.email,
-      subject: `${message.user.name} - Resultado da avaliação do Eneargrama`,
+      subject: `${message.user.name} - Resultado da avaliação do Eneagrama`,
       html: message.html,
       files: [
         {

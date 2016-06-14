@@ -16,10 +16,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
-          <a ui-sref="app.quiz" class="button button-clear button-block button-positive">
+        <div class="col center">
+          <button ui-sref="app.quiz" class="button button-clear button-positive" ng-click="vm.showQuizStartPopup()">
             Começar questionário
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -33,12 +33,18 @@
       </div>
       
       <div class="card" ng-repeat="item in vm.result.firstPlaces">
+        <div class="item item-divider">
+          <span>{{ item.title }}</span>
+        </div>
         <div class="item item-text-wrap result-card result-card-big">
           <h2>
             <span>Tipo</span>
             <span>{{ item.type }}</span>
           </h2>
           <p>{{ item.description }}</p>
+        </div>
+        <div class="item item-text-wrap">
+          <a ng-click="vm.openTypeDetailModal({{ item.type }})">ver mais detalhes</a>
         </div>
       </div>
       
@@ -48,12 +54,18 @@
       </div>
       
       <div class="card" ng-repeat="item in vm.result.secondPlaces">
-        <div class="item item-text-wrap result-card result-card-right">
-          <p>{{ item.description }}</p>
+        <div class="item item-divider">
+          <span>{{ item.title }}</span>
+        </div>
+        <div class="item item-text-wrap result-card">
           <h2>
             <span>Tipo</span>
             <span>{{ item.type }}</span>
           </h2>
+          <p>{{ item.description }}</p>
+        </div>
+        <div class="item item-text-wrap">
+          <a ng-click="vm.openTypeDetailModal({{ item.type }})">ver mais detalhes</a>
         </div>
       </div>
       
@@ -86,12 +98,18 @@
       </div>
       
       <div class="card" ng-repeat="item in vm.result.lastPlaces">
-        <div class="item item-text-wrap result-card">
+        <div class="item item-divider">
+          <span>{{ item.title }}</span>
+        </div>
+        <div class="item item-text-wrap result-card last-place">
           <h2>
             <span>Tipo</span>
             <span>{{ item.type }}</span>
           </h2>
           <p>{{ item.description }}</p>
+        </div>
+        <div class="item item-text-wrap">
+          <a ng-click="vm.openTypeDetailModal({{ item.type }})">ver mais detalhes</a>
         </div>
       </div>
       

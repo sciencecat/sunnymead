@@ -117,7 +117,7 @@
         }     
 
         function gotFS(fileSystem) {
-          fileSystem.root.getFile('eneargrama.pdf', { create: true, exclusive: false }, gotFileEntry, reject);
+          fileSystem.root.getFile('eneagrama.pdf', { create: true, exclusive: false }, gotFileEntry, reject);
         }
 
         function gotFileEntry(fileEntry) {

@@ -12,6 +12,14 @@
     
     vm.result = ResultRepository.get();
     
+    vm.showQuizStartPopup = function () {
+      $ionicPopup.alert({
+        title: 'Como responder o questionário',
+        template: '<p>Para que o teste tenha seu maior nível de precisão não é necessário pensar muito, responda com a primeira coisa que passar pela sua cabeça, mas com sinceridade.</p>',
+        okType: 'button-positive'
+      });
+    };
+    
     if (!vm.result) { return; }
     
     vm.email = {
@@ -54,6 +62,33 @@
     vm.chartData = vm.result.totals.sort(function (left, right) { return left.type - right.type; });
     vm.chartData.unshift(vm.chartData.pop());
     vm.chartData = [vm.chartData.map(function (item) { return item.total; })];
+    
+    vm.currentDetailModal = null;
+    
+    vm.openTypeDetailModal = function (type) {
+      if (vm.currentDetailModal) {
+        return;
+      }
+      
+      vm.currentDetailModal = $ionicModal
+        .fromTemplateUrl('templates/type_' + type + '_detail.html', {
+          scope: $scope,
+          animation: 'slide-in-up'
+        });
+        
+      vm.currentDetailModal
+        .then(function(modal) {
+          vm.currentDetailModal = modal;
+          vm.currentDetailModal.show();
+        });
+    };
+    
+    vm.closeDetailModal = function () {
+      if (vm.currentDetailModal && vm.currentDetailModal.hide) {
+        vm.currentDetailModal.hide();
+        vm.currentDetailModal = null;
+      }
+    };
     
     vm.openEmailModal = function () {
       vm.addDestination();
