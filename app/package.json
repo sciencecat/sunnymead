@@ -1,7 +1,7 @@
 {
   "name": "9Types",
   "version": "1.1.1",
-  "description": "9Types: Eneargrama",
+  "description": "9Types: Eneagrama",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
