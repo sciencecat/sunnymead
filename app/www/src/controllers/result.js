@@ -69,20 +69,12 @@
     vm.chartData.unshift(vm.chartData.pop());
     vm.chartData = [vm.chartData.map(function (item) { return item.total; })];
     
-    vm.currentDetailModal = null;
-    
     vm.openTypeDetailModal = function (type) {
-      if (vm.currentDetailModal) {
-        return;
-      }
-      
-      vm.currentDetailModal = $ionicModal
+      $ionicModal
         .fromTemplateUrl('templates/type_' + type + '_detail.html', {
           scope: $scope,
           animation: 'slide-in-up'
-        });
-        
-      vm.currentDetailModal
+        })
         .then(function(modal) {
           vm.currentDetailModal = modal;
           vm.currentDetailModal.show();
@@ -95,18 +87,6 @@
         vm.currentDetailModal = null;
       }
     };
-    
-    $scope.$on('$destroy', function() {
-      $scope.modal.remove();
-    });
-    
-    $scope.$on('modal.hidden', function() {
-      $scope.modal.remove();
-    });
-    
-    $scope.$on('modal.removed', function() {
-      vm.currentDetailModal = null;
-    });
     
     vm.openPdfModal = function () {
       vm.modal.show();

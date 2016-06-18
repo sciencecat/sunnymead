@@ -53,14 +53,18 @@
     });
   }
   
-  redirection.$inject = ['$rootScope', '$state', 'ResultRepository'];
+  redirection.$inject = ['$rootScope', '$state', 'ResultRepository', 'QuestionsRepository'];
   
-  function redirection($rootScope, $state, ResultRepository) {
+  function redirection($rootScope, $state, ResultRepository, QuestionsRepository) {
     
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
       if (toState.name === 'app.quiz' && ResultRepository.get()) {
         event.preventDefault();
         $state.go('app.result');
+      }
+      
+      if (toState.name === 'app.quiz' && toParams.page && (QuestionsRepository.getCurrentPage() < toParams.page)) {
+        event.preventDefault();
       }
     });
   }
