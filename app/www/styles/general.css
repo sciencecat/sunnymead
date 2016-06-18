@@ -150,3 +150,7 @@ input.ng-invalid:not(.ng-untouched) {
   display: block;
   font-size: 10px;
 }
+
+.details-modal-padding {
+  padding: 25px;
+}

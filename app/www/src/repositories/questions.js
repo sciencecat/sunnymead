@@ -20,20 +20,20 @@
       return angular.copy($localStorage[Config.questionsStorageKey]);
     }
     
-    function getCurrentPage() {
-      if (!$localStorage[Config.questionsStorageKey + 'currentPage']) {
-        return 1;
+    function getCurrentQuestion() {
+      if (!$localStorage[Config.questionsStorageKey + 'currentQuestion']) {
+        return 0;
       }
       
-      return angular.copy($localStorage[Config.questionsStorageKey + 'currentPage']);
+      return angular.copy($localStorage[Config.questionsStorageKey + 'currentQuestion']);
     }
     
     function save(questions) {
       $localStorage[Config.questionsStorageKey] = questions;
     }
     
-    function saveCurrentPage(page) {
-      $localStorage[Config.questionsStorageKey + 'currentPage'] = Number(page);
+    function saveCurrentQuestion(index) {
+      $localStorage[Config.questionsStorageKey + 'currentQuestion'] = Number(index);
     }
     
     function isAnswerValid(question) {
@@ -51,9 +51,9 @@
     
     return {
       get: get,
-      getCurrentPage: getCurrentPage,
+      getCurrentQuestion: getCurrentQuestion,
       save: save,
-      saveCurrentPage: saveCurrentPage,
+      saveCurrentQuestion: saveCurrentQuestion,
       isValid: isValid
     };
   }

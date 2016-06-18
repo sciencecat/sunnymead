@@ -6,36 +6,30 @@
     .controller('QuizController', QuizController);
 
   QuizController.$inject = [
-    '$state', 'QuestionsRepository', 'Result', 'ResultRepository', '$timeout',
-    '$ionicLoading'
+    '$state', 'QuestionsRepository', 'ResultRepository', '$timeout', '$ionicLoading'
   ];
 
   function QuizController(
-    $state, QuestionsRepository, Result, ResultRepository, $timeout, 
-    $ionicLoading
+    $state, QuestionsRepository, ResultRepository, $timeout, $ionicLoading
   ) {
     var vm = this;
     
     vm.questions = QuestionsRepository.get();
-    vm.currentPage = QuestionsRepository.getCurrentPage();
-    
-    $state.go('.', { page: vm.currentPage },  { notify: false });
+    vm.currentQuestion = QuestionsRepository.getCurrentQuestion();
     
     vm.onAnswer = function () {
       $ionicLoading.show({ template: '<ion-spinner icon="spiral"></ion-spinner>' });
       
-      QuestionsRepository.save(vm.questions);
-      
       $timeout(function () {
-        vm.currentPage = vm.currentPage + 1;
-        QuestionsRepository.saveCurrentPage(vm.currentPage);
+        vm.currentQuestion = vm.currentQuestion + 1;
+        QuestionsRepository.save(vm.questions);
+        QuestionsRepository.saveCurrentQuestion(vm.currentQuestion);
+        
         $ionicLoading.hide();
         
-        if (vm.currentPage > 90 || QuestionsRepository.isValid()) {
+        if (vm.currentQuestion > 90 || QuestionsRepository.isValid()) {
           return vm.finish();
         }
-        
-        $state.go('.', { page: vm.currentPage },  { notify: false });
       }, 500);
     };
     
@@ -44,10 +38,12 @@
         return;
       }
       
-      var result = Result.create(vm.questions);
-      ResultRepository.save(result);
+      $ionicLoading.show({ template: '<ion-spinner icon="spiral"></ion-spinner>' });
       
-      $state.go('app.result');
+      ResultRepository.create(vm.questions).then(function () {
+        $ionicLoading.hide();
+        $state.go('app.result');
+      });
     }
 
     // Debug
