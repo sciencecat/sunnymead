@@ -148,5 +148,9 @@ input.ng-invalid:not(.ng-untouched) {
 
 .clean-text-wrap a span:last-child {
   display: block;
-  font-size: 11px;
+  font-size: 10px;
+}
+
+.details-modal-padding {
+  padding: 25px;
 }

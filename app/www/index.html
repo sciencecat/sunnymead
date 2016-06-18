@@ -13,6 +13,7 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/ngstorage/ngStorage.min.js"></script>
     <script src="lib/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="lib/js-yaml/dist/js-yaml.js"></script>
     <script src="lib/pdfmake/build/pdfmake.js"></script>
     <script src="lib/pdfmake/build/vfs_fonts.js"></script>
     
@@ -27,22 +28,19 @@
     <script src="src/controllers/quiz.js"></script>
     <script src="src/controllers/result.js"></script>
     
-    <script src="src/data/questions.js"></script>
-    <script src="src/data/result.js"></script>
-    <script src="src/data/types.js"></script>
-    
     <script src="src/repositories/questions.js"></script>
     <script src="src/repositories/result.js"></script>
     <script src="src/repositories/user.js"></script>
+    <script src="src/repositories/types.js"></script>
 
     <script src="src/services/pdf_creator.js"></script>
     <script src="src/services/document_builder.js"></script>
 
     <script src="src/directives/answerer/answerer.js"></script>
-    <script src="src/directives/pagination_control/pagination_control.js"></script>
+    <script src="src/directives/type_details/type_details.js"></script>
     
-    <script src="src/filters/pagination.js"></script>
     <script src="src/filters/shuffle.js"></script>
+    <script src="src/filters/slice.js"></script>
   </head>
   <body ng-app="app">
     <ion-nav-view></ion-nav-view>

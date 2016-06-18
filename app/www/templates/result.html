@@ -17,8 +17,11 @@
       </div>
       <div class="row">
         <div class="col center">
-          <button ui-sref="app.quiz" class="button button-clear button-positive" ng-click="vm.showQuizStartPopup()">
-            Começar questionário
+          <button ui-sref="app.quiz" ng-if="!vm.hasStarted" class="button button-clear button-positive">
+            Começar o questionário
+          </button>
+          <button ui-sref="app.quiz" ng-if="vm.hasStarted" class="button button-clear button-positive">
+            Continuar o questionário
           </button>
         </div>
       </div>
@@ -44,7 +47,9 @@
           <p>{{ item.description }}</p>
         </div>
         <div class="item item-text-wrap">
-          <a ng-click="vm.openTypeDetailModal({{ item.type }})">ver mais detalhes</a>
+          <type-details type="{{ item.type }}">
+            <a>ver mais detalhes</a>
+          </type-details>
         </div>
       </div>
       
@@ -65,7 +70,9 @@
           <p>{{ item.description }}</p>
         </div>
         <div class="item item-text-wrap">
-          <a ng-click="vm.openTypeDetailModal({{ item.type }})">ver mais detalhes</a>
+          <type-details type="{{ item.type }}">
+            <a>ver mais detalhes</a>
+          </type-details>
         </div>
       </div>
       
@@ -109,7 +116,9 @@
           <p>{{ item.description }}</p>
         </div>
         <div class="item item-text-wrap">
-          <a ng-click="vm.openTypeDetailModal({{ item.type }})">ver mais detalhes</a>
+          <type-details type="{{ item.type }}">
+            <a>ver mais detalhes</a>
+          </type-details>
         </div>
       </div>
       
@@ -119,8 +128,7 @@
       </div>
       
       <div class="button-bar">
-        <a class="button button-balanced icon ion-email" ng-click="vm.openEmailModal()"></a>
-        <a class="button button-positive icon ion-ios-download" ng-click="vm.savePdf()"></a>
+        <a class="button button-positive icon ion-ios-download" ng-click="vm.openPdfModal()"></a>
         <a class="button button-assertive icon ion-ios-trash" ng-click="vm.cleanStorage()"></a>
       </div>
 

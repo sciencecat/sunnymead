@@ -1,0 +1,9 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-light">
+    <h1 class="title">Tipo {{ vm.data.type }} - {{ vm.data.name }}</h1>
+    <button class="button button-clear button-primary" ng-click="vm.close()">Voltar</button>
+  </ion-header-bar>
+  <ion-content class="padding details-modal-padding clean-text-wrap" padding="true">
+    <div ng-bind-html="vm.data.details"></div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,340 @@
+- type: 1
+  name: "O Reformista"
+  description: >-
+    Apesar de determinado e com um senso prático invejável, pode ser visto como 
+    hostil e teimoso em sua tomada de decisão.
+  details: >-
+    <p>
+      Tipo idealista, seguidor de princípios. Éticas e conscienciosas, as
+      pessoas do Tipo Um têm um senso muito claro do que é certo ou errado.
+      São professores e cruzados que sempre lutam para melhorar as coisas, mas
+      têm medo de errar. Organizadas, ordeiras e meticulosas, elas tentam viver
+      conforme altos padrões, mas podem resvalar para a crítica e o
+      perfeccionismo. Costumam ter problemas com a impaciência e a raiva
+      reprimida. Em seu aspecto mais positivo, quando se encontram na faixa
+      saudável, essas pessoas são criteriosas, ponderadas, realistas e nobres,
+      além de moralmente heroicas.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de ser mau, corrupto, malvado ou falho.
+      <i>“Errar não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de ter integridade (descamba em perfeccionismo e crítica).
+      <i>“Você é bom.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Viver por um objetivo mais sublime. Lembre-se que é de sua verdadeira
+      natureza ser sábio e ponderado.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      A sensação de ter a obrigação de cuidar de tudo sozinho.
+    </p>
+
+- type: 2
+  name: "O Ajudante"
+  description: >-
+    Apesar de perceptivo, cativante e carismático, pode ser visto como muito
+    apegado e, por vezes, prepotente.
+  details: >-
+    <p>
+      Tipo compreensivo, voltado para o lado interpessoal. As pessoas do Tipo
+      Dois são amigáveis, generosas, empáticas, sinceras e afetuosas, mas
+      podem ser também sentimentalistas e aduladoras, esforçando-se para
+      agradar os outros a qualquer preço. Sua maior motivação é chegar perto
+      dos demais e, por isso, muitas vezes tentam tornar-se necessárias.
+      Costumam ter dificuldade em cuidar de si mesmas e reconhecer suas
+      próprias necessidades. Em seu aspecto mais positivo, quando se encontram
+      na faixa saudável, são pessoas altruístas e desprendidas que amam a si
+      mesmas e aos demais incondicionalmente.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de não merecer ser amado.
+      <i>“Ter necessidades próprias não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de ser amado (descamba em necessidade de fazer-se necessário).
+      <i>“Você é querido.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Cuidar de si mesmo e dos outros. Lembre-se que é de sua verdadeira
+      natureza ser bom consigo mesmo e ter boa vontade e compaixão para com
+      seus semelhantes.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      A convicção de que precisa convencer os outros de que está certo.
+    </p>
+
+- type: 3
+  name: "O Realizador"
+  description: >-
+    Focado, motivado e flexível, mas também um tanto quanto manipulador,
+    frenético e, às vezes, com baixa auto-estima.
+  details: >-
+    <p>
+      Tipo adaptável, movido pelo sucesso. As pessoas do Tipo Três são seguras
+      de si, atraentes e encantadoras. Ambiciosas, competentes e sempre prontas
+      a agir elas podem deixar-se orientar muito também pelo status e pela
+      ideia de progredir na vida. Muitas vezes preocupam-se com a própria
+      imagem e com o que os outros pensam a seu respeito. Seus problemas
+      geralmente são a paixão excessiva pelo trabalho e a competitividade.
+      Em seu aspecto mais positivo, quando se encontram na faixa saudável, são
+      pessoas autênticas, que se aceitam como são e de fato representam tudo
+      aquilo que parecem ser: modelos que a todos inspiram.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de ser desprezível, de não valer nada.
+      <i>“Ter sentimentos e identidade próprios não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de ter valor (descamba em busca de sucesso).
+      <i>“Você é amado pelo que é.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Desenvolver-se e dar aos demais um exemplo. Lembre-se que é de sua
+      verdadeira natureza ter prazer na própria vida e estimar e valorizar
+      as pessoas.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      O surgimento do impulso de buscar status e atenção.
+    </p>
+
+- type: 4
+  name: "O Individualista"
+  description: >-
+    Criativo, detalhista e possui muita sensibilidade, mas é muito crítico,
+    um pouco trágico e pode se sentir deprimido.
+  details: >-
+    <p>
+      Tipo romântico, introspectivo. As pessoas do Tipo Quatro são atentas a
+      si mesmas, sensíveis, calmas e reservadas. São emocionalmente honestas e
+      não têm medo de revelar-se como são, mas estão sujeitas a flutuações de
+      humor e inibições. Podem mostrar-se desdenhosas e agir como se não
+      estivessem sujeitas às mesmas leis que os demais, ao mesmo tempo que se
+      esquivam das pessoas por sentir-se vulneráveis e cheias de defeitos. Seus
+      problemas mais comuns são o comodismo e a autocomiseração. Em seu aspecto
+      mais positivo, quando se encontram na faixa saudável, são pessoas muito
+      criativas e inspiradas, capazes de renovar-se e transformar as próprias
+      experiências.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de não ter identidade, incapaz ou incompetente.
+      <i>“Estar bem ou feliz demais não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de ser quem é (descamba em autocomplacência).
+      <i>“Você é visto como é.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Abandonar o passado e renovar-se com as próprias experiências.
+      Lembre-se que é de sua verdadeira natureza perdoar e usar tudo que
+      estiver ao seu alcance para seu crescimento e renovação.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      Apego aos sentimentos e sua intensificação pela imaginação.
+    </p>
+
+- type: 5
+  name: "O Investigador"
+  description: >-
+    Analítico e ponderado, gosta de se especializar no que faz, mas pode ser
+    visto como frio calculista e, muitas vezes, distante.
+  details: >-
+    <p>
+      Tipo concentrado, cerebral. As pessoas do Tipo Cinco são alertas,
+      perspicazes e curiosas. Conseguem abstrair-se de tudo e concentrar-se
+      no cultivo de ideias e dons os mais complexos. Independentes e inovadoras,
+      quando excessivamente dedicadas a seus pensamentos e construtos
+      imaginários, podem mostrar-se distantes e irritadiças. Em gral, seus
+      maiores problemas são o isolamento, a excentricidade e o niilismo. Em
+      seu aspecto mais positivo, quando se encontram na faixa saudável, as
+      pessoas do Tipo Cinco são como pioneiros e visionários que vivem adiante
+      de seu tempo e veem o mundo de uma forma inteiramente nova.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de ser inútil, incapaz ou incompetente.
+      <i>“Estar à vontade no mundo não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de ser competente (descamba em especializações inúteis).
+      <i>“Suas necessidades não são problema.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Observar a si mesmo e aos outros sem julgamentos nem expectativas.
+      Lembre-se que é de sua verdadeira natureza ter os pés na realidade,
+      contemplando as infinitas riquezas do mundo.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      Fuga da realidade e refúgio em mundos e conceitos mentais.
+    </p>
+
+- type: 6
+  name: "O Partidário"
+  description: >-
+    Desconfiado por natureza e, por isso, tende a saber onde se mete, mas
+    acaba tendo muita ansiedade e medo de tudo.
+  details: >-
+    <p>
+      Tipo dedicado, que valoriza a segurança. As pessoas do Tipo Seis são
+      esforçadas, responsáveis e dignas de confiança, mas podem ser defensivas,
+      evasivas e muito ansiosas, estressando-se só de reclamar do stress.
+      Costumam ser indecisas e cautelosas, mas podem mostrar-se reativas,
+      desafiadoras e rebeldes. Seus problemas mais comuns são a insegurança e
+      a desconfiança. Em seu aspecto mais positivo, quando se encontram na
+      faixa saudável, as pessoas deste tipo são dotadas de muita estabilidade
+      e autoconfiança, defendendo corajosamente os mais necessitados.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de não contar com apoio ou orientação.
+      <i>“Confiar em si mesmo não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de ter segurança (descamba em apego a convicções).
+      <i>“Você está seguro.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Ter fé em si mesmo e confiar na bondade da vida. Lembre-se que é de sua
+      verdadeira natureza ser corajoso e capaz de lidar com a vida sob
+      quaisquer circunstâncias.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      Dependência de algo exterior ao eu para orientação.
+    </p>
+
+- type: 7
+  name: "O Entusiasta"
+  description: >-
+    Apesar de bem-humorado e muito criativo, tende a se alienar de suas
+    próprias dificuldades através do acúmulo de tarefas.
+  details: >-
+    <p>
+      Tipo produtivo, sempre ocupado. As pessoas do Tipo Sete são versáteis,
+      espontâneas e otimistas. Práticas, brincalhonas e joviais, podem
+      mostrar-se também dispersivas e pouco disciplinadas, tendo a assumir os
+      responsabilidades do que poderiam dar conta. Sua eterna busca de novas
+      emoções pode levá-las a não terminar o que começaram, exaustas pelo
+      excesso de atividade. Seus maiores problemas são geralmente a
+      superficialidade e a impulsividade. Em seu aspecto mais positivo, quando
+      se encontram na faixa saudável, as pessoas do Tipo Sete mostram-se
+      capazes de concentrar-se em metas louváveis, realizando-se e tornando-se
+      cheias de alegria e gratidão.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de sofrer dor ou privação.
+      <i>“Depender dos outros para alguma coisa não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de ser feliz (descamba em escapismo frenético).
+      <i>“Você não será abandonado.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Celebrar com alegria a existência e compartilhar sua felicidade.
+      Lembre-se que é de sua verdadeira natureza ser feliz e contribuir para
+      que a experiência de todos seja rica.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      A sensação de que existe algo melhor em algum outro lugar.
+    </p>
+
+- type: 8
+  name: "O Desafiador"
+  description: >-
+    Nasceu para liderar com a sua assertividade, sendo um realizador nato, mas
+    pode ser muito intolerante, vingativo e agressivo.
+  details: >-
+    <p>
+      Tipo forte e dominador. As pessoas pertencentes ao Tipo Oito são seguras
+      de si, firmes e assertivas. Protetoras, talentosas e dedicadas, podem ser
+      também orgulhosas e dominadoras. Por achar que precisam controlar o meio
+      em que vivem, as pessoas deste tipo mostram-se muitas vezes contenciosas
+      e intimidadoras. Seu maior problema é a dificuldade de compartilhar a
+      intimidade. Em seu aspecto mais positivo, quando se encontram na faixa
+      saudável, as pessoas deste tipo são mestras do autodomínio - usam sua
+      forca para melhorar a vida dos outros, mostrando-se heroicas, magnânimas
+      e, as vezes, deixando sua marca na História.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de ser machucado ou controlado pelos outros.
+      <i>“Ser vulnerável e confiar nos outros não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de proteger-se (descamba em escapismo frenético).
+      <i>“Você não será traído.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Defender-se e defender aquilo em que acredita. Lembre-se que é de sua
+      verdadeira natureza ser forte e capaz de influir sobre o mundo de várias
+      formas positivas.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      A sensação de precisar pressionar e lutar para que as coisas aconteçam.
+    </p>
+
+- type: 9
+  name: "O Pacifista"
+  description: >-
+    Calmo e flexível, é um mediador por natureza, mas pode ser muito inseguro
+    e apático quando precisa tomar decisões.
+  details: >-
+    <p>
+      Tipo descomplicado de fácil convivência. As pessoas deste tipo são
+      constantes, crédulas e receptivas. Têm bom gênio, bom coração e são
+      fáceis de contentar, mas podem ir longe demais na disposição de ceder
+      para manter a paz. Em sua ânsia de evitar conflitos, podem exagerar na
+      complacência, minimizando todos os entraves que surgirem. Seus maiores
+      problemas são a passividade e a teimosia. Em seu aspecto mais positivo,
+      quando se encontram na faixa saudável, as pessoas do Tipo Nove são
+      incansáveis em sua dedicação e aproximar os demais e resolver
+      mal-entendidos.
+    </p>
+    <p>
+      <b>Medo fundamental:</b>
+      Medo de fragmentar-se, de perder o vínculo com os outros.
+      <i>“Impor-se não é bom.”</i>
+    </p>
+    <p>
+      <b>Desejo fundamental:</b>
+      O desejo de estar em paz (descamba em teimosia negligência).
+      <i>“Sua presença é importante.”</i>
+    </p>
+    <p>
+      <b>Convite:</b>
+      Levar ao seu mundo a paz e a cura. Lembre-se que é de sua verdadeira
+      natureza ser uma fonte inesgotável de serenidade aceitação e bondade.
+    </p>
+    <p>
+      <b>Sinal de Alerta:</b>
+      Acomodação exterior aos outros.
+    </p>
