@@ -13,7 +13,7 @@
 
   function ResultController(
     $scope, $ionicHistory, UserRepository, ResultRepository, Types,
-    $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http,
+    $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading,
     $document, Config, PDFCreatorService
   ) {
     var vm = this;

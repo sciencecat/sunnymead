@@ -20,8 +20,20 @@
       return angular.copy($localStorage[Config.questionsStorageKey]);
     }
     
+    function getCurrentPage() {
+      if (!$localStorage[Config.questionsStorageKey + 'currentPage']) {
+        return 1;
+      }
+      
+      return angular.copy($localStorage[Config.questionsStorageKey + 'currentPage']);
+    }
+    
     function save(questions) {
       $localStorage[Config.questionsStorageKey] = questions;
+    }
+    
+    function saveCurrentPage(page) {
+      $localStorage[Config.questionsStorageKey + 'currentPage'] = Number(page);
     }
     
     function isAnswerValid(question) {
@@ -39,7 +51,9 @@
     
     return {
       get: get,
+      getCurrentPage: getCurrentPage,
       save: save,
+      saveCurrentPage: saveCurrentPage,
       isValid: isValid
     };
   }
