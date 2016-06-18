@@ -17,8 +17,11 @@
       </div>
       <div class="row">
         <div class="col center">
-          <button ui-sref="app.quiz" class="button button-clear button-positive">
-            Começar questionário
+          <button ui-sref="app.quiz" ng-if="!vm.hasStarted" class="button button-clear button-positive">
+            Começar o questionário
+          </button>
+          <button ui-sref="app.quiz" ng-if="vm.hasStarted" class="button button-clear button-positive">
+            Continuar o questionário
           </button>
         </div>
       </div>

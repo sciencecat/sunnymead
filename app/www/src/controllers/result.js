@@ -8,17 +8,18 @@
   ResultController.$inject = [
     '$scope', '$ionicHistory', 'UserRepository', 'ResultRepository',
     '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading',
-    '$document', 'PDFCreatorService'
+    '$document', 'PDFCreatorService', 'QuestionsRepository'
   ];
 
   function ResultController(
     $scope, $ionicHistory, UserRepository, ResultRepository,
     $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading,
-    $document, PDFCreatorService
+    $document, PDFCreatorService, QuestionsRepository
   ) {
     var vm = this;
     
     vm.result = ResultRepository.get();
+    vm.hasStarted = QuestionsRepository.getCurrentQuestion() !== 0;
     
     if (!vm.result) { return; }
     

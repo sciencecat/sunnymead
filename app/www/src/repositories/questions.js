@@ -5,9 +5,9 @@
     .module('app')
     .factory('QuestionsRepository', QuestionsRepository);
 
-  QuestionsRepository.$inject = ['Questions', '$localStorage', '$filter', 'Config', '$q', '$http'];
+  QuestionsRepository.$inject = ['$localStorage', '$filter', 'Config', '$q', '$http'];
 
-  function QuestionsRepository(Questions, $localStorage, $filter, Config, Promise, $http) {
+  function QuestionsRepository($localStorage, $filter, Config, Promise, $http) {
     function fetch() {
       return $http.get('src/data/questions.yaml').then(function (result) {
         try {
