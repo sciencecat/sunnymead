@@ -6,27 +6,19 @@
     .controller('ResultController', ResultController);
 
   ResultController.$inject = [
-    '$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types',
+    '$scope', '$ionicHistory', 'UserRepository', 'ResultRepository',
     '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading',
-    '$document', 'Config', 'PDFCreatorService'
+    '$document', 'PDFCreatorService'
   ];
 
   function ResultController(
-    $scope, $ionicHistory, UserRepository, ResultRepository, Types,
+    $scope, $ionicHistory, UserRepository, ResultRepository,
     $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading,
-    $document, Config, PDFCreatorService
+    $document, PDFCreatorService
   ) {
     var vm = this;
     
     vm.result = ResultRepository.get();
-    
-    vm.showQuizStartPopup = function () {
-      $ionicPopup.alert({
-        title: 'Como responder o questionário',
-        template: '<p>Para que o teste tenha seu maior nível de precisão não é necessário pensar muito, responda com a primeira coisa que passar pela sua cabeça, mas com sinceridade.</p>',
-        okType: 'button-positive'
-      });
-    };
     
     if (!vm.result) { return; }
     

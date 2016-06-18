@@ -1,0 +1,359 @@
+- text: A maioria das pessoas me vê como alguém sério e sensato - e, no fim das contas, creio que sou assim mesmo.
+  answer: 0
+  type: 1
+
+- text: Embora eu possa ter um lado desregrado, de modo geral ele nunca foi a tônica de meu estilo.
+  answer: 0
+  type: 1
+
+- text: Parece que há um juiz dentro de minha mente; às vezes ele é ponderado e sábio, mas em muitas ocasiões é simplesmente rígido e severo.
+  answer: 0
+  type: 1
+
+- text: Meus princípios e ideais inspiram-me a realizações maiores e dão sentido e valor à minha vida.
+  answer: 0
+  type: 1
+
+- text: Não entendo como tanta gente tem padrões tão lassos.
+  answer: 0
+  type: 1
+
+- text: As coisas dependem tanto de mim para serem feitas que tenho de ser mais organizado e metódico que todo mundo.
+  answer: 0
+  type: 1
+
+- text: Tenho a impressão de possuir uma missão, talvez até uma vocação para algo sublime, e acho que posso atingir alguma coisa extraordinária na vida.
+  answer: 0
+  type: 1
+
+- text: Detesto erros e, por isso, geralmente sou extremamente rigoroso para certificar-me de que as coisas estão sendo feitas como devem.
+  answer: 0
+  type: 1
+
+- text: Em poucas palavras, há muito tempo venho acreditando que o certo é certo e o errado é errado.
+  answer: 0
+  type: 1
+
+- text: Para mim é difícil contentar-me com as coisas do jeito que são; não tenho medo que piorem com minha interferência.
+  answer: 0
+  type: 1
+
+- text: Para mim, ser amigável é natural; puxo conersa facilmente e chamo todo mundo pelo prenome.
+  answer: 0
+  type: 2
+
+- text: Não posso ver um cachorro sem dono que já quero levar para casa.
+  answer: 0
+  type: 2
+
+- text: O fato de ser uma pessoa atenciosa e generosa me faz sentir bem.
+  answer: 0
+  type: 2
+
+- text: Não sou de alegar o bem que faço às pessoas, mas fico muito chateado se elas não reconhecerem ou não se importarem com isso.
+  answer: 0
+  type: 2
+
+- text: É verdade que muitas vezes faço mais pelos outros do que deveria - dou demais e não penso muito em mim mesmo.
+  answer: 0
+  type: 2
+
+- text: Tenho um prazer especial em receber e entreter meus amigos e toda a minha "grande família."
+  answer: 0
+  type: 2
+
+- text: Posso ser afetuoso e ajudar as pessoas, mas sou mais forte do que pareço.
+  answer: 0
+  type: 2
+
+- text: Consigo manifestar meus sentimentos mais abertamente que a maioria.
+  answer: 0
+  type: 2
+
+- text: Minha saúde e meu bolso já sofreram muitas vezes por eu ter colocado as necessidades e os interesses dos outros acima dos meus.
+  answer: 0
+  type: 2
+
+- text: Adoro me desdobrar para fazer as pessoas se sentirem bem-vindas e queridas.
+  answer: 0
+  type: 2
+
+- text: Vejo-me como uma pessoa extremamente competente; fico muito aborrecido se não sou, no mínimo, eficiente.
+  answer: 0
+  type: 3
+
+- text: Meus sentimentos me parecem estranhos a mim mesmo - eu sinto as coisas com toda a força por algum tempo e depois as esqueço.
+  answer: 0
+  type: 3
+
+- text: Para mim é importante ser bem-sucedido, mesmo que aidna não tenha todo o sucesso que desejo.
+  answer: 0
+  type: 3
+
+- text: Seja isso bom ou mal, sei esconder minhas inseguranças muito bem - as pessoas jamais adivinhariam o que estou sentindo!
+  answer: 0
+  type: 3
+
+- text: Quero causar sempre boa impressão, por isso geralmente sou gentil, educado e amigável.
+  answer: 0
+  type: 3
+
+- text: Estou sempre a par de como meus colegas e amigos estão se saindo e tendo a comparar-me com eles.
+  answer: 0
+  type: 3
+
+- text: Procuro lutar para ser o melhor no que estou fazendo - quando não posso destacar-me em alguma coisa, nem lhe dou atenção.
+  answer: 0
+  type: 3
+
+- text: Fico muito aborrecido quando as pessoas não reconhecem a excelência do que faço.
+  answer: 0
+  type: 3
+
+- text: Sou mais adaptável que a maioria; se as coisas não dão certo, sei mudar meu comportamento para obter os resultados que pretendo.
+  answer: 0
+  type: 3
+
+- text: Sou um pouco viciado em trabalho - fico perdido quando não estou realizando coisas.
+  answer: 0
+  type: 3
+
+- text: Muita gente me acha enigmático, difícil e contraditório - e eu gosto de ser assim!
+  answer: 0
+  type: 4
+
+- text: Geralmente remôo os sentimentos negativos muito tempo antes de conseguir livrar-me deles.
+  answer: 0
+  type: 4
+
+- text: Costumo sentir-me solitário e sozinho mesmo quando estou com pessoas mais próximas.
+  answer: 0
+  type: 4
+
+- text: Quando sou criticado ou mal interpretado, costumo retrair-me e ficar amuado.
+  answer: 0
+  type: 4
+
+- text: Geralmente não sigo regras nem correspondo a expectativas porque quero dar meu toque especial a tudo aquilo que faço.
+  answer: 0
+  type: 4
+
+- text: Segundo a maioria das pessoas, sou dramático e temperamental.
+  answer: 0
+  type: 4
+
+- text: Gosto de passar muito tempo imaginando cenas e conversas que nem sempre ocorreram de fato.
+  answer: 0
+  type: 4
+
+- text: Quando as coisas ficam difíceis, geralmente eu desabo e desisto - talvez desista das coisas fácil demais.
+  answer: 0
+  type: 4
+
+- text: Encontrar a mim mesmo e ser fiel às minhas necessidades emocionais sempre foram motivações extremamente importantes para mim.
+  answer: 0
+  type: 4
+
+- text: Sempre tenho uma noção muito clara de minhas intuições, mesmo que não tenha coragem de agir de acordo com elas.
+  answer: 0
+  type: 4
+
+- text: Gosto de analisar as coisas com profundidade, estudando minuciosamente cada detalhe, até compreendê-las o mais inteiramente possível.
+  answer: 0
+  type: 5
+
+- text: Sou uma pessoa extremamente reservada que não franqueia a muita gente a entrada em seu mundo.
+  answer: 0
+  type: 5
+
+- text: 'Não me sinto particularmente grande ou poderoso, mas pequeno e invísivel: acho que daria um bom espião!'
+  answer: 0
+  type: 5
+
+- text: Só se pode tomar uma decisão racional quando se tem informações precisas - mas, aí, a maioria das pessoas, na verdade, não é exatamente racional.
+  answer: 0
+  type: 5
+
+- text: Minha família me considera meio estranho ou excêntrico - já ouvi muitas vezes que preciso sair mais.
+  answer: 0
+  type: 5
+
+- text: Quando quero, sou capaz de falar pelos cotovelos. Porém, na maioria das vezes, prefiro assistir de camarote à toda essa loucura à minha volta.
+  answer: 0
+  type: 5
+
+- text: Se você precisa resolver um problema, deixe-me trabalhar nele sozinho e depois eu lhe dou uma resposta.
+  answer: 0
+  type: 5
+
+- text: Quando a gente pára para pensar, vê que não há nada mais estranho que o assim chamado comportamento normal.
+  answer: 0
+  type: 5
+
+- text: Há tanta gente tão ignorante que é incrível que alguma coisa ainda consiga dar certo!
+  answer: 0
+  type: 5
+
+- text: Sou muito curioso e gosto de investigar o porquê das coisas - mesmo as mais óbvias deixam de sê-lo quando você realmente pára para analisá-las.
+  answer: 0
+  type: 5
+
+- text: Se cometo um erro, temo que todos pulem na minha garganta.
+  answer: 0
+  type: 6
+
+- text: Sinto-me mais seguro fazendo o que se espera de mim do que trabalhando por conta própria.
+  answer: 0
+  type: 6
+
+- text: Posso não concordar sempre com as regras - e nem sempre seguí-las - mas quero saber em que consistem!
+  answer: 0
+  type: 6
+
+- text: A primeira impressão que as pessoas me causam geralmente é muito forte e difícil de mudar.
+  answer: 0
+  type: 6
+
+- text: Sei o quanto eu posso estragar as coisas, portanto, suspeitar do que os outros estão "aprontando" tem muito sentido para mim.
+  answer: 0
+  type: 6
+
+- text: Quero confiar nas pessoas, mas muitas vezes vejo-me questionando suas intenções.
+  answer: 0
+  type: 6
+
+- text: Sondo a opinião daqueles em quem confio antes de tomar uma decisão.
+  answer: 0
+  type: 6
+
+- text: 'É realmente curioso: sou muitas vezes cético, até cínico, em relação a muitas coisas e, de repente, mudo e começo a acreditar completamente em tudo.'
+  answer: 0
+  type: 6
+
+- text: Sinto-me atraído pela autoridade e, ao mesmo tempo, descrente dela.
+  answer: 0
+  type: 6
+
+- text: Sou muito afetivo, apesar de quase nunca demonstrar o que sinto - a não ser para os mais intímos e, mesmo assim, nem sempre.
+  answer: 0
+  type: 6
+
+- text: Adoro viajar e descobrir diferentes tipo de pratos, de pessoas, de experiências - todo o fantástico turbilhão da vida!
+  answer: 0
+  type: 7
+
+- text: Minha agenda normalmente é cheia e eu gosto que seja assim; não quero que a grama cresça debaixo de meus pés.
+  answer: 0
+  type: 7
+
+- text: Para mim o que importa é a emoção e a variedade, mais que o conforto e a segurança - que eu, aliás, não desprezo quando encontro.
+  answer: 0
+  type: 7
+
+- text: Se tem uma coisa que não suporto é entediar-me - procuro dar um jeito de não me aborrecer nunca.
+  answer: 0
+  type: 7
+
+- text: Sou de entrar de cabeça nos relacionamentos - mas quando acabam, acabam.
+  answer: 0
+  type: 7
+
+- text: Sou curioso e aventureiro - geralmente sou o primeiro a experimentar coisas novas e interessantes.
+  answer: 0
+  type: 7
+
+- text: Quando eu já não gosto de uma coisa, eu paro de fazê-la.
+  answer: 0
+  type: 7
+
+- text: 'Não sou só uma pessoa "divertida": tenho um lado sério, até sombrio, só que não gosto de mexer muito com ele.'
+  answer: 0
+  type: 7
+
+- text: 'Sou bom no geral, mas não tanto nos pequenos detalhes: gosto mais de pensar para chegar a novas ideias que me envolver com sua execução.'
+  answer: 0
+  type: 7
+
+- text: Um de meus maiores problemas é que sou muito distraído e às vezes me disperso demais.
+  answer: 0
+  type: 7
+
+- text: Sou extremamente independente e não gosto de precisar de ninguém para as coisas realmente importantes.
+  answer: 0
+  type: 8
+
+- text: Sou da opinião que "é preciso quebrar alguns ovos quando se quer fazer uma omelete."
+  answer: 0
+  type: 8
+
+- text: Sei como conseguir as coisas - sei como recompensar e como pressionar as pessoas para que façam o que precisa ser feito.
+  answer: 0
+  type: 8
+
+- text: Não tenho muita simpatia pelos fracos e vacilantes - a fraqueza sempre é um convite aos problemas.
+  answer: 0
+  type: 8
+
+- text: Sou muito determinado e não sou de recuar nem desistir facilmente.
+  answer: 0
+  type: 8
+
+- text: Tenho um lado terno, até um pouco sentimental, que demonstro pra muito pouca gente.
+  answer: 0
+  type: 8
+
+- text: As pessoas que me conhecem apreciam o fato de eu ser objetivo e dizer exatamente o que penso.
+  answer: 0
+  type: 8
+
+- text: Vejo-me como um desafiador, alguém que faz as pessoas abandonarem a comodidade para dar o melhor de si.
+  answer: 0
+  type: 8
+
+- text: Meu senso de humor é direto, às vezes até um pouco rude, embora eu ache que a maioria das pessoas é demasiado pudica e suscetível.
+  answer: 0
+  type: 8
+
+- text: 'Sinto-me mais vivo quando faço o que os outros julgam impossível: eu gosto de ir até o limite e ver se consigo desafiar as probabilidades.'
+  answer: 0
+  type: 8
+
+- text: O que as pessoas gostam em mim é a sensação de segurança que lhes transmito.
+  answer: 0
+  type: 9
+
+- text: Prefiro concordar que criar uma cena.
+  answer: 0
+  type: 9
+
+- text: Não sei exatamente como, mas não deixo que as coisas me atinjam.
+  answer: 0
+  type: 9
+
+- text: Sou uma pessoa fácil de agradar e geralmente me contento com o que tenho.
+  answer: 0
+  type: 9
+
+- text: Já me disseram que sou distraído e alheio às coisas - o fato é que eu as entendo, mas simplesmente não quero reagir.
+  answer: 0
+  type: 9
+
+- text: Não me acho particularmente obstinado, mas as pessoas dizem que eu às vezes sou teimoso quando tomo uma decisão.
+  answer: 0
+  type: 9
+
+- text: É preciso aceitar o que a vida nos dá; afinal, não há mesmo muito o que fazer!
+  answer: 0
+  type: 9
+
+- text: Sou capaz de entender diferentes pontos de vista e geralmente concordo com as pessoas mais que discordo delas.
+  answer: 0
+  type: 9
+
+- text: Acredito que se devem realçar os fatores positivos, em vez de ficar martelando os negativos.
+  answer: 0
+  type: 9
+
+- text: Durante o dia, faço tudo que precisa ser feito, mas quando o dia acaba, eu relaxo mesmo.
+  answer: 0
+  type: 9

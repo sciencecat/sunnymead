@@ -53,9 +53,9 @@
     });
   }
   
-  redirection.$inject = ['$rootScope', '$state', 'ResultRepository', 'QuestionsRepository'];
+  redirection.$inject = ['$rootScope', '$state', 'ResultRepository'];
   
-  function redirection($rootScope, $state, ResultRepository, QuestionsRepository) {
+  function redirection($rootScope, $state, ResultRepository) {
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
       if (toState.name === 'app.quiz' && ResultRepository.get()) {
         event.preventDefault();

@@ -6,18 +6,43 @@
     .controller('QuizController', QuizController);
 
   QuizController.$inject = [
-    '$state', 'QuestionsRepository', 'ResultRepository', '$timeout', '$ionicLoading'
+    '$state', 'QuestionsRepository', 'ResultRepository', '$timeout',
+    '$ionicLoading', '$ionicPopup'
   ];
 
   function QuizController(
-    $state, QuestionsRepository, ResultRepository, $timeout, $ionicLoading
+    $state, QuestionsRepository, ResultRepository, $timeout,
+    $ionicLoading, $ionicPopup
   ) {
     var vm = this;
     
-    vm.questions = QuestionsRepository.get();
+    vm.questions = [];
     vm.currentQuestion = QuestionsRepository.getCurrentQuestion();
+    vm.onAnswer = onAnswer;
+    vm.finish = finish;
+    vm.answerAll = answerAll;
     
-    vm.onAnswer = function () {
+    return initialize();
+    
+    function initialize() {
+      $ionicLoading.show({ template: '<ion-spinner icon="spiral"></ion-spinner>' });
+      
+      QuestionsRepository.get().then(function (questions) {
+        vm.questions = questions;
+        
+        $ionicLoading.hide();
+        
+        if (vm.currentQuestion === 0) {
+          $ionicPopup.alert({
+            title: 'Como responder o questionário',
+            template: '<p>Para que o teste tenha seu maior nível de precisão não é necessário pensar muito, responda com a primeira coisa que passar pela sua cabeça, mas com sinceridade.</p>',
+            okType: 'button-positive'
+          });
+        }
+      });
+    }
+    
+    function onAnswer() {
       $ionicLoading.show({ template: '<ion-spinner icon="spiral"></ion-spinner>' });
       
       $timeout(function () {
@@ -31,9 +56,9 @@
           return vm.finish();
         }
       }, 500);
-    };
+    }
     
-    vm.finish = function () {
+    function finish() {
       if (!QuestionsRepository.isValid()) {
         return;
       }
@@ -46,14 +71,10 @@
       });
     }
 
-    // Debug
-
-    vm.debug = true;
-
-    vm.answerAll = function () {
+    function answerAll() {
       vm.questions.forEach(function (question) { question.answer = Math.floor(Math.random() * 5) + 1; });
       vm.onAnswer();
-    };
+    }
   }
 
 })();
