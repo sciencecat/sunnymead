@@ -1,7 +1,7 @@
 <ion-view view-title="Questionário">
   <ion-content class="padding">
 
-    <div ng-repeat="question in vm.questions | pagination:5" class="list card">
+    <div ng-repeat="question in vm.questions | pagination:1" class="list card">
       <div class="item">
         <h2 ng-bind="'Pergunta ' + (vm.questions.indexOf(question) + 1)"></h2>
       </div>
@@ -9,24 +9,15 @@
         <span ng-bind="question.text"></span>
       </div>
       <div class="item item-text-wrap">
-        <answerer ng-model="question.answer" on-answer="vm.saveQuestions()"></answerer>
+        <answerer ng-model="question.answer" on-answer="vm.onAnswer()"></answerer>
       </div>
     </div>
         
-    <pagination-control steps="5" total="vm.questions.length"></pagination-control>
-
-    <a class="button button-outline  button-block"
-       ng-class="{ 'button-assertive': !vm.isValid(), 'button-balanced': vm.isValid() }"
-       ng-disabled="!vm.isValid()"
-       ng-bind="vm.isValid() ? 'Finalizar' : 'Responda a todas as perguntas'"
-       ng-click="vm.finish()"></a>
-
     <div class="list" ng-if="vm.debug">
       <div class="item">
         <h3>Debug is On!</h3>
       </div>
       <div class="item button-bar">
-        <a class="button button-stable ion-ios-star-outline" ng-click="vm.unanswerAll()"></a>
         <a class="button button-stable ion-ios-star" ng-click="vm.answerAll()"></a>
       </div>
     </div>

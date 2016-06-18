@@ -5,17 +5,38 @@
     .module('app')
     .controller('QuizController', QuizController);
 
-  QuizController.$inject = ['$state', 'QuestionsRepository', 'Result', 'ResultRepository'];
+  QuizController.$inject = [
+    '$state', 'QuestionsRepository', 'Result', 'ResultRepository', '$timeout',
+    '$ionicLoading'
+  ];
 
-  function QuizController($state, QuestionsRepository, Result, ResultRepository) {
+  function QuizController(
+    $state, QuestionsRepository, Result, ResultRepository, $timeout, 
+    $ionicLoading
+  ) {
     var vm = this;
     
     vm.questions = QuestionsRepository.get();
+    vm.currentPage = QuestionsRepository.getCurrentPage();
     
-    vm.isValid = QuestionsRepository.isValid;
+    $state.go('.', { page: vm.currentPage },  { notify: false });
     
-    vm.saveQuestions = function () {
+    vm.onAnswer = function () {
+      $ionicLoading.show({ template: '<ion-spinner icon="spiral"></ion-spinner>' });
+      
       QuestionsRepository.save(vm.questions);
+      
+      $timeout(function () {
+        vm.currentPage = vm.currentPage + 1;
+        QuestionsRepository.saveCurrentPage(vm.currentPage);
+        $ionicLoading.hide();
+        
+        if (vm.currentPage > 90 || QuestionsRepository.isValid()) {
+          return vm.finish();
+        }
+        
+        $state.go('.', { page: vm.currentPage },  { notify: false });
+      }, 500);
     };
     
     vm.finish = function () {
@@ -35,12 +56,7 @@
 
     vm.answerAll = function () {
       vm.questions.forEach(function (question) { question.answer = Math.floor(Math.random() * 5) + 1; });
-      vm.saveQuestions();
-    };
-
-    vm.unanswerAll = function () {
-      vm.questions.forEach(function (question) { question.answer = 0; });
-      vm.saveQuestions();
+      vm.onAnswer();
     };
   }
 

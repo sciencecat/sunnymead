@@ -12,14 +12,8 @@
     
     vm.types = Types;
     
-    vm.currentDetailModal = null;
-    
     vm.openTypeDetailModal = function (type) {
-      if (vm.currentDetailModal) {
-        return;
-      }
-      
-      vm.currentDetailModal = $ionicModal.fromTemplateUrl('templates/type_' + type + '_detail.html', {
+      $ionicModal.fromTemplateUrl('templates/type_' + type + '_detail.html', {
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function(modal) {
@@ -29,12 +23,10 @@
     };
     
     vm.closeDetailModal = function () {
-      if (!vm.currentDetailModal || !vm.currentDetailModal.hide) {
-        return;
+      if (vm.currentDetailModal && vm.currentDetailModal.hide) {
+        vm.currentDetailModal.hide();
+        vm.currentDetailModal = null;
       }
-      
-      vm.currentDetailModal.hide();
-      vm.currentDetailModal = null;
     };
   }
 
