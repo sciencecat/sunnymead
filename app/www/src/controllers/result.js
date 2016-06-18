@@ -5,9 +5,17 @@
     .module('app')
     .controller('ResultController', ResultController);
 
-  ResultController.$inject = ['$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types', '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading', '$http', '$document', 'Config', 'PDFCreatorService'];
+  ResultController.$inject = [
+    '$scope', '$ionicHistory', 'UserRepository', 'ResultRepository', 'Types',
+    '$localStorage', '$state', '$ionicPopup', '$ionicModal', '$ionicLoading',
+    '$document', 'Config', 'PDFCreatorService'
+  ];
 
-  function ResultController($scope, $ionicHistory, UserRepository, ResultRepository, Types, $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http, $document, Config, PDFCreatorService) {
+  function ResultController(
+    $scope, $ionicHistory, UserRepository, ResultRepository, Types,
+    $localStorage, $state, $ionicPopup, $ionicModal, $ionicLoading, $http,
+    $document, Config, PDFCreatorService
+  ) {
     var vm = this;
     
     vm.result = ResultRepository.get();
@@ -88,6 +96,18 @@
       }
     };
     
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+    });
+    
+    $scope.$on('modal.hidden', function() {
+      $scope.modal.remove();
+    });
+    
+    $scope.$on('modal.removed', function() {
+      vm.currentDetailModal = null;
+    });
+    
     vm.openPdfModal = function () {
       vm.modal.show();
     };
@@ -96,18 +116,6 @@
       vm.modal.hide();
     };
     
-    vm.generateEmail = function () {
-      $ionicLoading.show({ template: '<ion-spinner icon="spiral"></ion-spinner>' });
-      
-      UserRepository.save(vm.email.user);
-      
-      var body = {
-        destinations: vm.getValidDestinations(),
-        user: vm.email.user,
-        result: vm.result
-      };
-    };
-
     vm.savePdf = function () {
       vm.result.graphImageURL = document.querySelector('#hidden-radar').toDataURL();
       vm.result.user = vm.user;
