@@ -119,8 +119,8 @@
       function image() {
         return {
             image: result.graphImageURL,
-            width: 360,
-            height: 360,
+            width: 320,
+            height: 320,
             alignment: 'center'
       	};
       }
