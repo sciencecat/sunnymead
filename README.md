@@ -1,9 +1,8 @@
-# Sunnymead
+# Sunnymead - 9Types app
 
-| Environment | Branch  | Url                                      | Codeship                                                                                                                                                                       |
-|-------------|---------|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Production  | master  | https://sunnymead.herokuapp.com/         | [ ![Codeship Status for sciencecat/sunnymead](https://codeship.com/projects/1abc13f0-0045-0134-4d8c-1e95689fe79f/status?branch=master)](https://codeship.com/projects/153146)  |
-| Staging     | staging | https://sunnymead-staging.herokuapp.com/ | [ ![Codeship Status for sciencecat/sunnymead](https://codeship.com/projects/1abc13f0-0045-0134-4d8c-1e95689fe79f/status?branch=staging)](https://codeship.com/projects/153146) |
+| Environment | Branch  | Url                                      |
+|-------------|---------|------------------------------------------|
+| Production  | master  | https://sunnymead.herokuapp.com/         |
 
 ### Dependencies
 
@@ -12,18 +11,42 @@
 ```
 $ curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
-$ npm install
 ```
 
-### Tests
+##### Ionic 1.x + Cordova
 
 ```
-$ npm test
+$ npm install -g cordova ionic
 ```
 
-### Deploy
+##### Java JDK 8+
 
-Deploy is made **automatically** by Codeship when new pushes comes:
+```
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java8-installer
+```
 
-- **staging**: for staging environment
-- **master**: for production environment
+##### Android SDK API 21+
+
+[See this page to install the Android SDK](https://developer.android.com/studio/index.html)
+
+### Building
+
+```
+$ cd app
+$ ionic platform android
+$ ionic build android
+```
+
+The apk file will be generated on ```app/platforms/android/build/outputs/apk/android-debug.apk```
+
+### Data
+
+All the questions / type description are stored on ```app/www/src/data``` folder.
+The file format are in yaml, see the [documentation](https://github.com/nodeca/js-yaml).
+
+### The Website
+
+The website runs a copy of the app's code that is on branch **master**.
+Deploy begins automatically when there is a new commit on branch master.

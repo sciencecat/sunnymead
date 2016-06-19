@@ -70,11 +70,6 @@
         $state.go('app.result');
       });
     }
-
-    function answerAll() {
-      vm.questions.forEach(function (question) { question.answer = Math.floor(Math.random() * 5) + 1; });
-      vm.onAnswer();
-    }
   }
 
 })();
