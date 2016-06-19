@@ -20,7 +20,6 @@
     vm.currentQuestion = QuestionsRepository.getCurrentQuestion();
     vm.onAnswer = onAnswer;
     vm.finish = finish;
-    vm.answerAll = answerAll;
     
     return initialize();
     
