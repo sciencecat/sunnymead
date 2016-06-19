@@ -35,7 +35,7 @@ $ sudo apt-get install oracle-java8-installer
 
 ```
 $ cd app
-$ ionic platform android
+$ ionic platform add android
 $ ionic build android
 ```
 
