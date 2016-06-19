@@ -38,7 +38,7 @@
   answer: 0
   type: 1
 
-- text: Para mim, ser amigável é natural; puxo conersa facilmente e chamo todo mundo pelo prenome.
+- text: Para mim, ser amigável é natural; puxo conversa facilmente e chamo todo mundo por apelidos.
   answer: 0
   type: 2
 
@@ -50,7 +50,7 @@
   answer: 0
   type: 2
 
-- text: Não sou de anunciar o bem que faço às pessoas, mas fico muito chateado se elas não reconhecerem ou não se importarem com isso.
+- text: Não sou de alegar o bem que faço às pessoas, mas fico muito chateado se elas não reconhecerem ou não se importarem com isso.
   answer: 0
   type: 2
 
@@ -86,7 +86,7 @@
   answer: 0
   type: 3
 
-- text: Para mim é importante ser bem-sucedido, mesmo que aidna não tenha todo o sucesso que desejo.
+- text: Para mim é importante ser bem-sucedido, mesmo que ainda não tenha todo o sucesso que desejo.
   answer: 0
   type: 3
 
