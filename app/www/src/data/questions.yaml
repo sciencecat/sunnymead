@@ -38,7 +38,7 @@
   answer: 0
   type: 1
 
-- text: Para mim, ser amigável é natural; puxo conersa facilmente e chamo todo mundo pelo prenome.
+- text: Para mim, ser amigável é natural; puxo conversa facilmente e chamo todo mundo por apelidos.
   answer: 0
   type: 2
 
@@ -50,7 +50,7 @@
   answer: 0
   type: 2
 
-- text: Não sou de anunciar o bem que faço às pessoas, mas fico muito chateado se elas não reconhecerem ou não se importarem com isso.
+- text: Não sou de alegar o bem que faço às pessoas, mas fico muito chateado se elas não reconhecerem ou não se importarem com isso.
   answer: 0
   type: 2
 
@@ -86,7 +86,7 @@
   answer: 0
   type: 3
 
-- text: Para mim é importante ser bem-sucedido, mesmo que aidna não tenha todo o sucesso que desejo.
+- text: Para mim é importante ser bem-sucedido, mesmo que ainda não tenha todo o sucesso que desejo.
   answer: 0
   type: 3
 
@@ -170,11 +170,11 @@
   answer: 0
   type: 5
 
-- text: Só se pode tomar uma decisão racional quando se tem informações precisas - mas, aí, a maioria das pessoas, na verdade, não é exatamente racional.
+- text: Muitas vezes perco a noção do tempo, pois estou sempre muito concentrado no que faço.
   answer: 0
   type: 5
 
-- text: Minha família me considera meio estranho ou excêntrico - já ouvi muitas vezes que preciso sair mais.
+- text: Minha família me considera meio estranho - já ouvi muitas vezes que preciso sair mais.
   answer: 0
   type: 5
 
@@ -246,7 +246,7 @@
   answer: 0
   type: 7
 
-- text: Para mim o que importa é a emoção e a variedade, mais que o conforto e a segurança - que eu, aliás, não desprezo quando encontro.
+- text: Quando realmente quero uma coisa, quase sempre descubro um meio de conseguí-la.
   answer: 0
   type: 7
 
@@ -254,7 +254,7 @@
   answer: 0
   type: 7
 
-- text: Sou de entrar de cabeça nos relacionamentos - mas quando acabam, acabam.
+- text: Acho ótimo estar com as pessoas - contanto que elas queiram ir aonde eu quero.
   answer: 0
   type: 7
 
@@ -262,7 +262,7 @@
   answer: 0
   type: 7
 
-- text: Quando eu já não gosto de uma coisa, eu paro de fazê-la.
+- text: Quando eu já não gosto de fazer alguma coisa, eu paro de fazê-la.
   answer: 0
   type: 7
 
@@ -338,7 +338,7 @@
   answer: 0
   type: 9
 
-- text: Não me acho particularmente obstinado, mas as pessoas dizem que eu às vezes sou teimoso quando tomo uma decisão.
+- text: Não me incomodo de estar com as pessoas nem de estar só - para mim, tanto faz, contanto que esteja em paz comigo mesmo.
   answer: 0
   type: 9
 
